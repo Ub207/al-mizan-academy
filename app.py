@@ -66,6 +66,30 @@ st.markdown("""
 .stChatMessage {
     font-family: 'Poppins', sans-serif;
     border-radius: 12px;
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.stChatMessage p,
+.stChatMessage li,
+.stChatMessage span,
+.stChatMessage div,
+.stChatMessage .stMarkdown,
+.stChatMessage [data-testid="stMarkdownContainer"] {
+    color: #e8eef5 !important;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* User message bubble */
+.stChatMessage[data-testid="user-message"] {
+    background: rgba(212,175,55,0.12) !important;
+    border: 1px solid rgba(212,175,55,0.25);
+}
+
+/* Assistant message bubble */
+.stChatMessage[data-testid="assistant-message"] {
+    background: rgba(255,255,255,0.07) !important;
 }
 
 /* Sidebar */
