@@ -446,12 +446,6 @@ import streamlit as st
 import os
 import numpy as np
 from pathlib import Path
-from dotenv import load_dotenv
-
-# ======================
-# LOAD ENV
-# ======================
-load_dotenv()
 
 # ======================
 # PAGE CONFIG
