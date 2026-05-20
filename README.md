@@ -38,3 +38,4 @@ streamlit run app.py
 
 ---
 2025 Al-Mizan Online Quran Academy - Qari Hafiz Ubaid ur Rehman
+"# finance_bot" 
