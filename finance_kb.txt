@@ -1,0 +1,11 @@
+Q: What is budgeting?
+A: Budgeting is the process of planning income and expenses.
+
+Q: What is savings?
+A: Savings is the money left after expenses.
+
+Q: What is investment?
+A: Investment is putting money into assets to generate profit.
+
+Q: What is compound interest?
+A: Compound interest is interest calculated on initial amount plus previous interest.
