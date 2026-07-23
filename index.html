@@ -944,6 +944,17 @@
     if (e.target === document.getElementById("chat-overlay")) closeChat();
   }
   document.addEventListener("keydown", function(e) { if (e.key === "Escape") closeChat(); });
+
+  // Courses tab switching
+  document.querySelectorAll(".courses-tab").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var target = btn.getAttribute("data-tab");
+      document.querySelectorAll(".courses-tab").forEach(function (b) { b.classList.remove("active"); });
+      document.querySelectorAll(".tab-content").forEach(function (c) { c.classList.remove("active"); });
+      btn.classList.add("active");
+      document.getElementById("tab-" + target).classList.add("active");
+    });
+  });
 </script>
 
 </body>
