@@ -301,13 +301,17 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("**📚 Our Courses:**")
     st.markdown("""
-    - Nazra Quran (Basic Reading)
-    - Tajweed (Proper Recitation)
-    - Hifz-ul-Quran (Memorization)
-    - Saba Qiraat (7 Recitation Styles)
-    - Islamic Studies
-    - Arabic Language
-    - Ijazah Program
+    **Quran:** Norani Qaida · Nazra Quran · Hifz · Gardaan
+
+    **Tajweed:** Basic · Advanced
+
+    **Translation & Understanding:** Complete Translation · Fahm-e-Quran · Tafseer-e-Quran · Muallimul Quran
+
+    **Islamic Studies:** Foundation · Supplications · Seerah · Tazkia
+
+    **Arabic Language:** Grammar · Quranic Arabic · Arabic for Kids · Functional Arabic
+
+    **Specialist (custom pricing):** Saba Qiraat · Ijazah Program
     """)
     st.markdown("---")
     st.markdown("**💰 Packages (USD/month):**")
