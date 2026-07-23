@@ -138,6 +138,20 @@
 
     /* ── COURSES ── */
     #courses { background: var(--white); }
+    .courses-tabs {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      margin-bottom: 28px; max-width: 1100px;
+    }
+    .courses-tab {
+      padding: 8px 20px; border: 1px solid var(--border);
+      border-radius: 20px; background: var(--white);
+      color: var(--text); font-size: 13px; font-weight: 500;
+      cursor: pointer; transition: all 0.2s; font-family: var(--sans);
+    }
+    .courses-tab:hover { border-color: var(--gold); color: var(--gold); }
+    .courses-tab.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
     .courses-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 18px; max-width: 1100px;
@@ -147,16 +161,9 @@
       padding: 22px; transition: border-color 0.2s;
     }
     .course-card:hover { border-color: var(--gold); }
-    .course-tag {
-      display: inline-block; background: #fdf6ec; color: var(--gold);
-      font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
-      text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px;
-    }
-    .course-card.specialist { border-color: rgba(200,169,110,0.4); background: #fdfaf5; }
-    .course-card.specialist .course-tag { background: var(--gold); color: #fff; }
+    .course-icon { font-size: 22px; margin-bottom: 10px; }
     .course-card h3 { font-size: 15px; font-weight: 600; color: var(--dark); margin-bottom: 8px; }
-    .course-card p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
-    .course-for { font-size: 12px; color: var(--gold); font-weight: 500; }
+    .course-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
     /* ── PRICING ── */
     #pricing { background: var(--bg2); }
@@ -401,48 +408,126 @@
     <h2 class="section-title">What You Can Learn</h2>
     <p class="section-sub">From beginner foundations to advanced Ijazah certification — all courses taught personally.</p>
   </div>
-  <div class="courses-grid">
-    <div class="course-card">
-      <div class="course-tag">Foundation</div>
-      <h3>Noorani Qaida</h3>
-      <p>Foundational Arabic letters, pronunciation, and basic recitation rules.</p>
-      <p class="course-for">For: Beginners & children</p>
+  <div class="courses-tabs">
+    <button class="courses-tab active" data-tab="quran">Quran</button>
+    <button class="courses-tab" data-tab="tajweed">Tajweed</button>
+    <button class="courses-tab" data-tab="translation">Translation & Understanding</button>
+    <button class="courses-tab" data-tab="islamic">Islamic Studies</button>
+    <button class="courses-tab" data-tab="arabic">Arabic Language</button>
+  </div>
+
+  <div class="tab-content active" id="tab-quran">
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-icon">🔤</div>
+        <h3>Norani Qaida</h3>
+        <p>Build a strong foundation in Quranic reading by learning Arabic letters, pronunciation, and the basic principles of recitation.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">📜</div>
+        <h3>Nazra Quran</h3>
+        <p>Learn to read the Quran fluently and confidently with correct pronunciation and articulation.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🕌</div>
+        <h3>Hifz</h3>
+        <p>Memorize the Quran through a structured and effective system, with dedicated guidance and regular revision.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🔄</div>
+        <h3>Gardaan Course</h3>
+        <p>Strengthen Quran memorization through systematic revision, helping students improve retention, fluency, and accuracy in recitation.</p>
+      </div>
     </div>
-    <div class="course-card">
-      <div class="course-tag">Tajweed & Fluency</div>
-      <h3>Quran Reading (Nazira)</h3>
-      <p>Step-by-step Quran reading with proper Makharij and Sifaat. Build fluency.</p>
-      <p class="course-for">For: Students who know letters</p>
+  </div>
+
+  <div class="tab-content" id="tab-tajweed">
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-icon">📝</div>
+        <h3>Basic Tajweed</h3>
+        <p>Learn the fundamental rules of Tajweed and develop correct pronunciation for accurate Quranic recitation.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">⚡</div>
+        <h3>Advanced Tajweed</h3>
+        <p>Master advanced Tajweed rules and refine your recitation with greater accuracy, fluency, and confidence.</p>
+      </div>
     </div>
-    <div class="course-card">
-      <div class="course-tag">Recitation Mastery</div>
-      <h3>Advanced Tajweed</h3>
-      <p>Master rules of Noon Saakin, Meem Saakin, Qalqalah, and Madd with practical application.</p>
-      <p class="course-for">For: Intermediate readers</p>
+  </div>
+
+  <div class="tab-content" id="tab-translation">
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-icon">📚</div>
+        <h3>Complete Translation of the Quran</h3>
+        <p>Study the translation of the entire Quran to develop a deeper understanding of its message, guidance, and teachings.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">💡</div>
+        <h3>Fahm-e-Quran</h3>
+        <p>Gain a deeper understanding of Quranic meanings and learn how its guidance applies to everyday life.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">📖</div>
+        <h3>Tafseer-e-Quran</h3>
+        <p>Explore the explanation and interpretation of Quranic verses to develop a richer and more comprehensive understanding of the Quran.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🌟</div>
+        <h3>Muallimul Quran</h3>
+        <p>Learn to understand the Quran in an easy and accessible way through Quranic Arabic, without relying on complex traditional grammar rules. Especially suitable for beginners.</p>
+      </div>
     </div>
-    <div class="course-card">
-      <div class="course-tag">Memorization</div>
-      <h3>Quran Memorization (Hifz)</h3>
-      <p>Personalized memorization plans with daily revision (Sabaq, Sabqi, Manzil) and progress tracking.</p>
-      <p class="course-for">For: Committed students of all ages</p>
+  </div>
+
+  <div class="tab-content" id="tab-islamic">
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-icon">🕌</div>
+        <h3>Islamic Foundation</h3>
+        <p>Develop a strong foundation in essential Islamic beliefs, teachings, values, and practices.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🤲</div>
+        <h3>Islamic Supplications</h3>
+        <p>Learn important authentic supplications and understand how to incorporate them into daily life.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">📖</div>
+        <h3>Seerah & Stories of the Sahabah</h3>
+        <p>Discover the inspiring life of Prophet Muhammad (PBUH) and learn valuable lessons from the lives of his noble companions.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">💚</div>
+        <h3>Tazkia Course</h3>
+        <p>Focus on spiritual development, character building, self-discipline, and strengthening your relationship with Allah.</p>
+      </div>
     </div>
-    <div class="course-card specialist">
-      <div class="course-tag">Specialist Course</div>
-      <h3>Saba Qiraat (7 Recitations)</h3>
-      <p>Learn the seven canonical recitations of the Quran — a rare specialization taught by a certified Qari with Ijazah.</p>
-      <p class="course-for">For: Advanced students seeking depth</p>
-    </div>
-    <div class="course-card specialist">
-      <div class="course-tag">Specialist Course</div>
-      <h3>Ijazah Program</h3>
-      <p>Earn a certified chain of narration (Sanad) in Quran recitation — the traditional pathway followed for centuries.</p>
-      <p class="course-for">For: Serious, advanced students</p>
-    </div>
-    <div class="course-card">
-      <div class="course-tag">Islamic Studies</div>
-      <h3>Basic Islamic Studies</h3>
-      <p>Aqeedah, Fiqh, Seerah, and daily duas — taught by a qualified Aalim with formal Dars-i-Nizami training.</p>
-      <p class="course-for">For: Children & adults</p>
+  </div>
+
+  <div class="tab-content" id="tab-arabic">
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-icon">📐</div>
+        <h3>Arabic Grammar</h3>
+        <p>Develop a solid understanding of Arabic grammar to improve reading, writing, comprehension, and communication skills.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">📖</div>
+        <h3>Quranic Arabic</h3>
+        <p>Learn the vocabulary, expressions, and language structures commonly found in the Quran to enhance your understanding of its verses.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">🧒</div>
+        <h3>Arabic for Kids</h3>
+        <p>Introduce children to the Arabic language through engaging, enjoyable, and age-appropriate learning activities.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-icon">💬</div>
+        <h3>Functional Arabic</h3>
+        <p>Develop practical Arabic communication skills for everyday conversations and real-life situations.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -596,13 +681,34 @@
         <label>Which course are you interested in?</label>
         <select>
           <option value="">Select a course...</option>
-          <option>Noorani Qaida</option>
-          <option>Quran Reading (Nazira)</option>
-          <option>Advanced Tajweed</option>
-          <option>Quran Memorization (Hifz)</option>
-          <option>Saba Qiraat (7 Recitations)</option>
-          <option>Ijazah Program</option>
-          <option>Basic Islamic Studies</option>
+          <optgroup label="Quran">
+            <option>Norani Qaida</option>
+            <option>Nazra Quran</option>
+            <option>Hifz</option>
+            <option>Gardaan Course</option>
+          </optgroup>
+          <optgroup label="Tajweed">
+            <option>Basic Tajweed</option>
+            <option>Advanced Tajweed</option>
+          </optgroup>
+          <optgroup label="Quran Translation & Understanding">
+            <option>Complete Translation of the Quran</option>
+            <option>Fahm-e-Quran</option>
+            <option>Tafseer-e-Quran</option>
+            <option>Muallimul Quran</option>
+          </optgroup>
+          <optgroup label="Islamic Studies">
+            <option>Islamic Foundation</option>
+            <option>Islamic Supplications</option>
+            <option>Seerah & Stories of the Sahabah</option>
+            <option>Tazkia Course</option>
+          </optgroup>
+          <optgroup label="Arabic Language">
+            <option>Arabic Grammar</option>
+            <option>Quranic Arabic</option>
+            <option>Arabic for Kids</option>
+            <option>Functional Arabic</option>
+          </optgroup>
           <option>Not sure — please advise</option>
         </select>
       </div>
