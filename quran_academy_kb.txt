@@ -120,11 +120,11 @@ Q: How can I enroll or get more information?
 A: You can reach us through:
 - WhatsApp: Message us directly for quick responses
 - Email: usmanubaidurrehman@gmail.com
-- Website: quranconnectacademy.netlify.app
+- Website: https://ub207.github.io/ai-quran-chatbot-demo/
 We respond within 24 hours and are happy to answer any questions before you decide.
 
 Q: What is your WhatsApp number?
-A: Please visit our website at quranconnectacademy.netlify.app for our current WhatsApp contact number. You can also email us at usmanubaidurrehman@gmail.com.
+A: Please visit our website at https://ub207.github.io/ai-quran-chatbot-demo/ for our current WhatsApp contact number. You can also email us at usmanubaidurrehman@gmail.com.
 
 Q: Do you offer classes in Urdu and English?
 A: Yes! Our teacher is fluent in Urdu, English, and Arabic. Classes can be conducted in your preferred language. Most of our international students prefer English-medium instruction with Arabic Quran text.
