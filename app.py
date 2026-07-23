@@ -249,7 +249,7 @@ RULES:
 
 CONTACT INFO (use when relevant):
 - Email: usmanubaidurrehman@gmail.com
-- Website: https://ub207.github.io/ai-quran-chatbot-demo/
+- Website: https://ub207.github.io/al-mizan-academy/
 - Free trial class available via WhatsApp"""
 
     # Build messages for API
@@ -323,7 +323,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("**📞 Contact:**")
     st.markdown("✉️ usmanubaidurrehman@gmail.com")
-    st.markdown("🌐 [Visit Website](https://ub207.github.io/ai-quran-chatbot-demo/)")
+    st.markdown("🌐 [Visit Website](https://ub207.github.io/al-mizan-academy/)")
     st.markdown("---")
     st.markdown("**🎓 FREE Trial Class Available!**")
 
