@@ -28,60 +28,61 @@ st.set_page_config(
 # --- Custom CSS for Light Theme ---
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 .stApp {
-    background: #fcf9f2;
+    background: #faf7f2;
 }
 
 .academy-header {
     text-align: center;
     padding: 1.5rem 1rem;
-    background: linear-gradient(180deg, #1a2f4a 0%, #0d2137 100%);
-    border-bottom: 2px solid #d4af37;
+    background: linear-gradient(180deg, #0f1b2d 0%, #16243e 100%);
+    border-bottom: 2px solid #c9a84c;
     margin-bottom: 1.5rem;
     border-radius: 0 0 12px 12px;
 }
 
 .academy-header h1 {
-    font-family: 'Amiri', serif;
-    color: #d4af37;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #c9a84c;
     font-size: 2rem;
     margin-bottom: 0.3rem;
+    font-weight: 700;
 }
 
 .academy-header .bismillah {
-    font-family: 'Amiri', serif;
-    color: rgba(212,175,55,0.7);
+    font-family: 'Playfair Display', Georgia, serif;
+    color: rgba(201,168,76,0.65);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .academy-header p {
-    font-family: 'Poppins', sans-serif;
-    color: #a0b8d8;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #94a3b8;
     font-size: 0.9rem;
     font-weight: 300;
 }
 
 .stChatMessage {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     border-radius: 12px;
 }
 
 section[data-testid="stSidebar"] {
-    background: #fffcf5;
-    border-right: 1px solid #ede4d6;
+    background: #faf7f2;
+    border-right: 1px solid #e2d9cb;
 }
 
 section[data-testid="stSidebar"] .stMarkdown {
-    color: #2c3e50;
+    color: #1e293b;
 }
 
 .stButton > button {
-    background: linear-gradient(135deg, #d4af37 0%, #b8962e 100%);
+    background: #c9a84c;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     font-weight: 600;
     border: none;
     border-radius: 8px;
@@ -89,46 +90,47 @@ section[data-testid="stSidebar"] .stMarkdown {
 }
 
 .stButton > button:hover {
+    background: #dfc06a;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(212,175,55,0.4);
+    box-shadow: 0 4px 15px rgba(201,168,76,0.4);
 }
 
 .stChatInput {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
 }
 
 .quick-q {
     display: inline-block;
-    background: #fff8ee;
-    border: 1px solid #d4af37;
+    background: #faf7f2;
+    border: 1px solid #c9a84c;
     border-radius: 20px;
     padding: 0.4rem 1rem;
     margin: 0.2rem;
     color: #8a7a4a;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     font-size: 0.85rem;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .quick-q:hover {
-    background: rgba(212,175,55,0.25);
+    background: rgba(201,168,76,0.25);
 }
 
 .footer {
     text-align: center;
     padding: 1rem;
     color: #8a7a4a;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     font-size: 0.75rem;
     margin-top: 2rem;
-    border-top: 1px solid #ede4d6;
+    border-top: 1px solid #e2d9cb;
 }
 [data-testid="stChatMessageContent"] p {
-    color: #1a1a2e !important;
+    color: #1e293b !important;
 }
 .st-bb {
-    color: #1a1a2e !important;
+    color: #1e293b !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -249,7 +251,7 @@ RULES:
 
 CONTACT INFO (use when relevant):
 - Email: usmanubaidurrehman@gmail.com
-- Website: https://ub207.github.io/al-mizan-academy/
+- Website: https://ub207.github.io/al-meezan/
 - Free trial class available via WhatsApp"""
 
     # Build messages for API
@@ -277,8 +279,8 @@ CONTACT INFO (use when relevant):
 st.markdown("""
 <div class="academy-header">
     <div class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
-    <h1>🕌 Al-Mizan Online Quran Academy</h1>
-    <p>AI-Powered Student Assistant — Ask anything about our courses, pricing & enrollment</p>
+    <h1>Al-Mizan Online Quran Academy</h1>
+    <p>AI-Powered Student Assistant &mdash; Ask anything about courses, pricing &amp; enrollment</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -297,21 +299,21 @@ except Exception as e:
 
 # --- Sidebar ---
 with st.sidebar:
-    st.markdown("### 🕌 Al-Mizan Academy")
+    st.markdown('<h3 style="font-family:Playfair Display,Georgia,serif;color:#0f1b2d;">🕌 Al-Mizan Academy</h3>', unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("**📚 Our Courses:**")
     st.markdown("""
-    **Quran:** Norani Qaida · Nazra Quran · Hifz · Gardaan
+    **Quran:** Norani Qaida &middot; Nazra Quran &middot; Hifz &middot; Gardaan
 
-    **Tajweed:** Basic · Advanced
+    **Tajweed:** Basic &middot; Advanced
 
-    **Translation & Understanding:** Complete Translation · Fahm-e-Quran · Tafseer-e-Quran · Muallimul Quran
+    **Translation:** Complete Translation &middot; Fahm-e-Quran &middot; Tafseer-e-Quran &middot; Muallimul Quran
 
-    **Islamic Studies:** Foundation · Supplications · Seerah · Tazkia
+    **Islamic Studies:** Foundation &middot; Supplications &middot; Seerah &middot; Tazkia
 
-    **Arabic Language:** Grammar · Quranic Arabic · Arabic for Kids · Functional Arabic
+    **Arabic Language:** Grammar &middot; Quranic Arabic &middot; Arabic for Kids &middot; Functional Arabic
 
-    **Specialist (custom pricing):** Saba Qiraat · Ijazah Program
+    **Specialist (custom pricing):** Saba Qiraat &middot; Ijazah Program
     """)
     st.markdown("---")
     st.markdown("**💰 Packages (USD/month):**")
@@ -322,10 +324,10 @@ with st.sidebar:
     """)
     st.markdown("---")
     st.markdown("**📞 Contact:**")
-    st.markdown("✉️ usmanubaidurrehman@gmail.com")
-    st.markdown("🌐 [Visit Website](https://ub207.github.io/al-mizan-academy/)")
+    st.markdown("&nbsp;&nbsp;✉️ usmanubaidurrehman@gmail.com")
+    st.markdown("&nbsp;&nbsp;🌐 [Visit Website](https://ub207.github.io/al-meezan/)")
     st.markdown("---")
-    st.markdown("**🎓 FREE Trial Class Available!**")
+    st.markdown('<p style="background:#c9a84c;color:#fff;padding:0.5rem;border-radius:8px;text-align:center;font-weight:600;font-size:0.9rem;">🎓 FREE Trial Class Available!</p>', unsafe_allow_html=True)
 
     if st.button("🗑️ Clear Chat", use_container_width=True):
         st.session_state.messages = []
