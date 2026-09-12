@@ -36,9 +36,9 @@ Two deliverables ship from this one repo, deployed to two different places:
 | `index.html` | Academy marketing website (single self-contained file) | GitHub Pages → `ub207.github.io/al-mizan-academy/` |
 
 **RAG pipeline** (`app.py`, all in-process, no vector DB service):
-`quran_academy_kb.txt` → chunk → embed with `all-MiniLM-L6-v2` (sentence-transformers) → FAISS `IndexFlatL2` → retrieve top-3 → inject as context into a Groq chat completion (`llama-3.3-70b-versatile`, temp 0.3, max 800 tokens, last 6 turns of history).
+`quran_academy_kb.txt` → chunk → embed with `all-MiniLM-L6-v2` (sentence-transformers) → FAISS `IndexFlatL2` → retrieve top-6 → inject as context into a Groq chat completion (`openai/gpt-oss-120b`, temp 0.3, max 800 tokens, last 6 turns of history).
 
-**Website ↔ chatbot coupling:** `index.html` embeds the deployed chatbot in an `<iframe>` pointing at the Streamlit app (`al-mizan-academy.streamlit.app`). That URL appears in several spots in `index.html` — the iframe `src` (~line 1176), the `CHATBOT` JS var (~line 1217), and the "open in new tab" links — so if the Streamlit deployment URL changes, update all of them.
+**Website ↔ chatbot coupling:** `index.html` embeds the deployed chatbot in an `<iframe>` pointing at the Streamlit app (`al-mizan-academy.streamlit.app`). The URL now lives in one config object at the top of the page's `<script>` — `SITE.chatbotUrl` (plus the iframe `src` in the #chatbot section and two "open in new tab" links) — and the WhatsApp number in `SITE.whatsappNumber`. Pricing is likewise config-only: `SITE.pricing`. If the Streamlit deployment URL changes, update `SITE.chatbotUrl` and the iframe/link occurrences.
 
 ## Things that will bite you
 

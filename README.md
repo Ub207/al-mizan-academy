@@ -4,7 +4,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-app-FF4B4B?logo=streamlit&logoColor=white)
-![Groq](https://img.shields.io/badge/Groq-Llama%203.3%2070B-F55036)
+![Groq](https://img.shields.io/badge/Groq-GPT--OSS%20120B-F55036)
 ![FAISS](https://img.shields.io/badge/FAISS-vector%20search-0467DF)
 ![RAG](https://img.shields.io/badge/RAG-retrieval%20augmented-6C4AB6)
 
@@ -46,7 +46,7 @@ quran_academy_kb.txt
 user question
   → embed → retrieve the top-6 most relevant chunks
   → inject [retrieved context] + [authoritative course catalogue] + [last 6 turns]
-  → Groq chat completion (llama-3.3-70b-versatile)
+  → Groq chat completion (openai/gpt-oss-120b)
   → grounded answer
 ```
 
@@ -56,7 +56,7 @@ The full course catalogue also lives directly in the system prompt, so the bot *
 
 - **Python 3.9+**
 - **Streamlit** — chat UI
-- **Groq API** — `llama-3.3-70b-versatile` (Llama 3.3 70B)
+- **Groq API** — `openai/gpt-oss-120b` (GPT-OSS 120B)
 - **sentence-transformers** — `all-MiniLM-L6-v2` embeddings
 - **FAISS** (`faiss-cpu`) — vector similarity search
 - **langchain-text-splitters** — fallback chunking
@@ -67,6 +67,7 @@ The full course catalogue also lives directly in the system prompt, so the bot *
 ```
 al-mizan-academy/
 ├── index.html                  <- Academy website (single self-contained page)
+├── assets/                     <- Teacher portraits (WebP + JPEG, 3 sizes) + OG cover
 ├── app.py                      <- RAG AI chatbot (Streamlit + Groq)
 ├── quran_academy_kb.txt        <- Chatbot knowledge base (Q&A format)
 ├── requirements.txt            <- Python dependencies
@@ -108,15 +109,12 @@ streamlit run app.py
 ### Website → GitHub Pages (free)
 
 1. Repo **Settings → Pages**.
-2. **Source:** *Deploy from a branch* → `main` → `/ (root)`.
+2. **Source:** *Deploy from a branch* → `gh-pages` → `/ (root)`. Note this is **not** `main` — the live site is served from a separate `gh-pages` branch that holds its own copy of `index.html`, `app.py`, and `quran_academy_kb.txt`. A push to `main` does **not** update the live site; the deploy is manual.
 3. Your site publishes at `https://<username>.github.io/al-mizan-academy/`.
 
 ### Connect the two
 
-The website embeds the chatbot via an `<iframe>`. The Streamlit URL is hardcoded in **two** places in `index.html` — keep them in sync:
-
-- the iframe `src` (~line 1176)
-- the `CHATBOT` JavaScript variable (~line 1217)
+The website embeds the chatbot via an `<iframe>`. The Streamlit URL lives in one config object at the top of `index.html`'s `<script>` — `SITE.chatbotUrl` — plus the iframe `src` in the `#chatbot` section and two "open in new tab" links. Update them together if the deployment URL changes. `SITE.whatsappNumber` and `SITE.pricing` are config-only too.
 
 ## 📚 Updating the knowledge base (important)
 

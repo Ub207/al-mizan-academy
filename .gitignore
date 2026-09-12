@@ -7,3 +7,6 @@ dist/
 build/
 .venv/
 venv/
+
+# Unreferenced source image (2 MB) — not used by index.html
+assets/ChatGPT Image*.png
