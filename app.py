@@ -1,6 +1,6 @@
 """
-Al-Mizan Online Quran Academy — AI Chatbot
-==========================================
+Mizan Academy (Al-Mizan Online Quran Academy) — AI Chatbot
+==========================================================
 RAG-powered chatbot using Groq API + FAISS + Sentence Transformers
 Answers student queries about courses, pricing, scheduling, and more.
 
@@ -19,7 +19,7 @@ load_dotenv()
 
 # --- Page Config ---
 st.set_page_config(
-    page_title="Al-Mizan Quran Academy — AI Assistant",
+    page_title="Mizan Academy — AI Assistant",
     page_icon="🕌",
     layout="centered",
     initial_sidebar_state="collapsed",
@@ -106,7 +106,7 @@ section[data-testid="stSidebar"] .stMarkdown {
     border-radius: 20px;
     padding: 0.4rem 1rem;
     margin: 0.2rem;
-    color: #8a7a4a;
+    color: #7a6728;
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 0.85rem;
     cursor: pointer;
@@ -120,7 +120,7 @@ section[data-testid="stSidebar"] .stMarkdown {
 .footer {
     text-align: center;
     padding: 1rem;
-    color: #8a7a4a;
+    color: #6b5b23;
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 0.75rem;
     margin-top: 2rem;
@@ -131,6 +131,29 @@ section[data-testid="stSidebar"] .stMarkdown {
 }
 .st-bb {
     color: #1e293b !important;
+}
+
+/* Chat bubbles — navy for the user, warm cream for the assistant (matches the site brand) */
+div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]) {
+    justify-content: flex-end;
+}
+div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]) [data-testid="stChatMessageContent"] {
+    background: #0f1b2d;
+    border-radius: 16px 16px 4px 16px;
+    padding: 10px 14px;
+    width: fit-content;
+    max-width: 85%;
+}
+div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]) [data-testid="stChatMessageContent"] p {
+    color: #ffffff !important;
+}
+div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarAssistant"]) [data-testid="stChatMessageContent"] {
+    background: #f4f1ea;
+    border: 1px solid #e6dfd3;
+    border-radius: 4px 16px 16px 16px;
+    padding: 10px 14px;
+    width: fit-content;
+    max-width: 88%;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -227,7 +250,7 @@ def get_groq_response(user_message: str, context: str, chat_history: list) -> st
 
     client = Groq(api_key=api_key)
 
-    system_prompt = f"""You are the AI Assistant for Al-Mizan Online Quran Academy. Your name is "Al-Mizan Assistant".
+    system_prompt = f"""You are the AI Assistant for Mizan Academy (also known as Al-Mizan Online Quran Academy). Your name is "Mizan Assistant".
 
 ROLE: You help prospective and current students with questions about the academy's courses, pricing, scheduling, enrollment, and Islamic education topics.
 
@@ -250,7 +273,7 @@ COURSE CATALOGUE (authoritative — this is the COMPLETE list of courses we offe
 
 RULES:
 1. Use BOTH the Course Catalogue above and the Knowledge Base Context. The catalogue is the definitive list of what we teach — if a student names any course in it (even misspelled, e.g. "gardan" means the "Gardaan Course"), confirm we offer it and describe it warmly. Use the context for pricing and finer details; only if information is genuinely unavailable should you politely say so and suggest contacting the academy directly.
-2. Always be accurate about pricing, course details, and teacher credentials.
+2. Always be accurate about pricing, course details, and teacher credentials. Pricing is personalised: plans are 2, 3, or 5 classes per week with 30–45 minute lessons, and families receive a personal quote. Never state a fixed price amount.
 3. For enrollment inquiries, guide them to book a FREE trial class.
 4. Keep responses concise but helpful (2-4 paragraphs max).
 5. If asked about Islamic rulings (Fatwa), politely redirect them to qualified scholars and clarify you only assist with academy-related queries.
@@ -260,7 +283,7 @@ RULES:
 CONTACT INFO (use when relevant):
 - Email: usmanubaidurrehman@gmail.com
 - Website: https://ub207.github.io/al-mizan-academy/
-- Free trial class available via WhatsApp"""
+- Free trial class available via WhatsApp; fill in the trial form on the website or message us directly"""
 
     # Build messages for API
     messages = [{"role": "system", "content": system_prompt}]
@@ -287,7 +310,7 @@ CONTACT INFO (use when relevant):
 st.markdown("""
 <div class="academy-header">
     <div class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
-    <h1>Al-Mizan Online Quran Academy</h1>
+    <h1>Mizan Academy</h1>
     <p>AI-Powered Student Assistant &mdash; Ask anything about courses, pricing &amp; enrollment</p>
 </div>
 """, unsafe_allow_html=True)
@@ -307,7 +330,7 @@ except Exception as e:
 
 # --- Sidebar ---
 with st.sidebar:
-    st.markdown('<h3 style="font-family:Playfair Display,Georgia,serif;color:#0f1b2d;">🕌 Al-Mizan Academy</h3>', unsafe_allow_html=True)
+    st.markdown('<h3 style="font-family:Playfair Display,Georgia,serif;color:#0f1b2d;">🕌 Mizan Academy</h3>', unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("**📚 Our Courses:**")
     st.markdown("""
@@ -324,11 +347,9 @@ with st.sidebar:
     **Specialist (custom pricing):** Saba Qiraat &middot; Ijazah Program
     """)
     st.markdown("---")
-    st.markdown("**💰 Packages (USD/month):**")
+    st.markdown("**💰 Flexible Plans & Pricing:**")
     st.markdown("""
-    - Starter: $75 (4 classes)
-    - Standard: $140 (8 classes)
-    - Intensive: $200 (12 classes)
+    Plans are based on 2, 3, or 5 classes per week with one-to-one 30–45 minute lessons. Pricing is personalised — contact us for a quote for your family.
     """)
     st.markdown("---")
     st.markdown("**📞 Contact:**")
@@ -348,10 +369,10 @@ if not st.session_state.messages:
     cols = st.columns(2)
     quick_questions = [
         "What courses do you offer?",
-        "What are the pricing packages?",
-        "Do you offer a free trial?",
+        "What happens in the free trial?",
+        "Do you teach kids and adults?",
         "What is Saba Qiraat?",
-        "Can adults join classes?",
+        "Can girls or women join?",
         "How are classes conducted?",
     ]
     for i, q in enumerate(quick_questions):
@@ -369,7 +390,7 @@ for message in st.session_state.messages:
 
 
 # --- Chat Input ---
-if prompt := st.chat_input("Assalamu Alaikum! Ask me anything about Al-Mizan Academy..."):
+if prompt := st.chat_input("Assalamu Alaikum! Ask me anything about Mizan Academy..."):
     # Add user message
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user", avatar="👤"):
@@ -395,7 +416,7 @@ if prompt := st.chat_input("Assalamu Alaikum! Ask me anything about Al-Mizan Aca
 # --- Footer ---
 st.markdown("""
 <div class="footer">
-    Powered by Al-Mizan Online Quran Academy | Built with ❤️ using Streamlit & Groq AI<br>
-    © 2026 Al-Mizan Online Quran Academy — All Rights Reserved
+    Powered by Mizan Academy | Built with ❤️ using Streamlit & Groq AI<br>
+    © 2026 Mizan Academy — All Rights Reserved
 </div>
 """, unsafe_allow_html=True)

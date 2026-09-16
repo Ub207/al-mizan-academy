@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,7 +59,7 @@
       "@type": "Person",
       "name": "Ubaid ur Rahman",
       "jobTitle": "Founder & Lead Quran Teacher",
-      "description": "Fazil graduate with extensive Quran teaching experience, teaching students worldwide online."
+      "description": "Hafiz-e-Quran and Fazil graduate who teaches Quran, Tajweed, Qaida, Arabic and Islamic Studies online to students worldwide."
     },
     "makesOffer": [
       { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Quran Reading (Nazra)", "description": "Learn to read the Holy Quran fluently and accurately with proper pronunciation." } },
@@ -89,7 +89,7 @@
         "name": "Do you teach adults?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. A large portion of our students are adult professionals, university students, parents, and reverts who wish to learn Quran reading, correct their Tajweed, or study Islamic basics at their own schedule."
+          "text": "Yes. We warmly welcome adult learners — including professionals, university students, parents and reverts who wish to learn Quran reading, correct their Tajweed, or study Islamic basics at their own schedule."
         }
       },
       {
@@ -134,7 +134,7 @@
       },
       {
         "@type": "Question",
-        "name": "Do you offer UK, USA, Canada friendly schedules?",
+        "name": "Do you offer UK / USA / Canada friendly schedules?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes. Classes are scheduled in your local time zone, whether that's the UK, USA, Canada, or elsewhere. When you message us, simply let us know your country and preferred times and we'll arrange a slot that works."
@@ -145,7 +145,7 @@
         "name": "How long is each class?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Each class is 45 minutes — a duration that keeps lessons focused without tiring young learners. Depending on the plan you choose, students have 2, 3, or 5 classes per week."
+          "text": "Classes are 30 to 45 minutes — short enough to keep young learners focused, long enough to make real progress. Depending on the plan you choose, students have 2, 3, or 5 classes per week."
         }
       },
       {
@@ -220,8 +220,10 @@
       --gray-bg:      #F8FAFC;
       --gray-line:    #E2E8F0;
       --white:        #FFFFFF;
-      --whatsapp:     #25D366;
-      --whatsapp-dk:  #1EBE5B;
+      /* WhatsApp brand green fails AA for white text (2:1); use a darker
+         brand-family teal (5.2:1 white text) for buttons, bright green for icons. */
+      --whatsapp:     #0B7C6C;
+      --whatsapp-dk:  #095F53;
 
       --radius:   16px;
       --radius-sm: 10px;
@@ -294,9 +296,9 @@
       white-space: nowrap;
     }
     .btn:active { transform: translateY(1px) scale(.99); }
-    .btn-primary { background: var(--emerald); color: #fff; box-shadow: 0 8px 24px rgba(5,150,105,.28); }
-    .btn-primary:hover { background: var(--emerald-dark); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(5,150,105,.34); }
-    .btn-whatsapp { background: var(--whatsapp); color: #fff; box-shadow: 0 8px 24px rgba(37,211,102,.28); }
+    .btn-primary { background: var(--emerald-dark); color: #fff; box-shadow: 0 8px 24px rgba(5,150,105,.28); }
+    .btn-primary:hover { background: var(--emerald-deep); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(5,150,105,.34); }
+    .btn-whatsapp { background: var(--whatsapp); color: #fff; box-shadow: 0 8px 24px rgba(11,124,108,.28); }
     .btn-whatsapp:hover { background: var(--whatsapp-dk); transform: translateY(-2px); }
     .btn-outline { background: var(--white); color: var(--navy); border: 1.5px solid var(--gray-line); }
     .btn-outline:hover { border-color: var(--emerald); color: var(--emerald-dark); transform: translateY(-2px); }
@@ -449,7 +451,6 @@
       font-size: 13.5px; font-weight: 600; color: var(--emerald-deep);
       box-shadow: var(--shadow-sm); margin-bottom: 22px;
     }
-    .hero-trust-pill .stars { color: #F59E0B; letter-spacing: 1px; font-size: 14px; }
     .hero h1 {
       font-size: clamp(2.1rem, 4.8vw, 3.4rem); font-weight: 800;
       letter-spacing: -.02em; margin-bottom: 18px;
@@ -501,13 +502,6 @@
     .portrait-nameplate strong {
       display: inline-block; font-family: var(--heading); font-size: 15px; color: var(--navy); font-weight: 800;
     }
-    .verified-pill {
-      display: inline-flex; align-items: center; gap: 4px;
-      font-size: 11px; font-weight: 700; color: var(--emerald-dark);
-      background: var(--emerald-tint); border: 1px solid var(--emerald-line);
-      padding: 2px 7px; border-radius: 999px;
-    }
-    .verified-pill svg { width: 12px; height: 12px; color: var(--emerald); }
     .portrait-nameplate small { display: block; font-size: 11.5px; color: var(--muted); margin-top: 1px; font-weight: 500; }
 
     .float-badge {
@@ -765,10 +759,10 @@
     .course-link:hover svg { transform: translateX(3px); }
     .course-wa-btn {
       display: inline-flex; align-items: center; gap: 6px; font-size: 13px;
-      color: #128C7E; font-weight: 600; text-decoration: none;
+      color: #0D6E63; font-weight: 700; text-decoration: none;
     }
     .course-wa-btn:hover { text-decoration: underline; }
-    .course-wa-btn svg { width: 16px; height: 16px; color: #25D366; }
+    .course-wa-btn svg { width: 16px; height: 16px; color: var(--whatsapp); }
     .courses-note { margin-top: 28px; font-size: 14px; color: var(--muted); text-align: center; }
     .courses-note a { color: var(--emerald-dark); font-weight: 600; }
 
@@ -807,7 +801,7 @@
     }
     .step-num {
       width: 40px; height: 40px; border-radius: 12px; margin-bottom: 16px;
-      background: var(--emerald); color: #fff; font-family: var(--heading);
+      background: var(--emerald-dark); color: #fff; font-family: var(--heading);
       font-size: 17px; font-weight: 800; display: flex; align-items: center; justify-content: center;
     }
     .step h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; }
@@ -828,7 +822,7 @@
     .trial-step-num {
       display: inline-flex; align-items: center; justify-content: center;
       width: 34px; height: 34px; border-radius: 50%;
-      background: var(--emerald); color: #fff; font-family: var(--heading);
+      background: var(--emerald-dark); color: #fff; font-family: var(--heading);
       font-weight: 800; font-size: 15px; margin-bottom: 12px;
     }
     .trial-step h3 { font-size: 15px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
@@ -871,7 +865,7 @@
     .price-card.featured { border: 2px solid var(--emerald); box-shadow: var(--shadow-md); }
     .price-badge {
       position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-      background: var(--emerald); color: #fff; font-size: 11px; font-weight: 800;
+      background: var(--emerald-dark); color: #fff; font-size: 11px; font-weight: 800;
       letter-spacing: .08em; text-transform: uppercase;
       padding: 5px 16px; border-radius: 999px; white-space: nowrap;
     }
@@ -1015,15 +1009,17 @@
     .form-group { margin-bottom: 16px; }
     .form-group label { display: block; font-size: 13.5px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
     .form-group label .req { color: var(--emerald-dark); }
-    .form-group input, .form-group select {
+    .form-group label .opt { color: var(--muted); font-weight: 500; }
+    .form-group input, .form-group select, .form-group textarea {
       width: 100%; padding: 13px 14px; border: 1.5px solid var(--gray-line); border-radius: 10px;
       font-size: 15px; font-family: var(--body); color: var(--ink); background: var(--white);
       transition: border-color .2s; min-height: 48px;
     }
-    .form-group input:focus, .form-group select:focus { border-color: var(--emerald); outline-offset: 0; }
-    .form-group input::placeholder { color: #64748B; }
+    .form-group textarea { min-height: 88px; resize: vertical; line-height: 1.55; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--emerald); outline-offset: 0; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #64748B; }
     .form-error { display: none; font-size: 12.5px; color: #DC2626; margin-top: 5px; font-weight: 500; }
-    .form-group.invalid input, .form-group.invalid select { border-color: #DC2626; }
+    .form-group.invalid input, .form-group.invalid select, .form-group.invalid textarea { border-color: #DC2626; }
     .form-group.invalid .form-error { display: block; }
     .form-submit { width: 100%; margin-top: 6px; }
     .form-note { font-size: 12.5px; color: var(--muted); text-align: center; margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 6px; }
@@ -1034,7 +1030,7 @@
       background: var(--white); border: 1px solid var(--gray-line); border-radius: var(--radius);
       padding: 24px 26px;
     }
-    .contact-tile h4 { font-size: 15px; font-weight: 800; margin-bottom: 4px; }
+    .contact-tile h3 { font-size: 15px; font-weight: 800; margin-bottom: 4px; }
     .contact-tile p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
     .contact-tile .btn { width: 100%; }
     .info-lines { list-style: none; display: flex; flex-direction: column; gap: 13px; }
@@ -1125,13 +1121,32 @@
       background: var(--whatsapp); color: #fff; text-decoration: none;
       border-radius: 999px; padding: 15px 22px;
       font-size: 15px; font-weight: 800; font-family: var(--heading);
-      box-shadow: 0 10px 30px rgba(37,211,102,.45); transition: transform .2s, background .2s;
+      box-shadow: 0 10px 30px rgba(11,124,108,.45); transition: transform .2s, background .2s;
       position: relative;
     }
     .wa-float:hover { background: var(--whatsapp-dk); transform: translateY(-2px); }
     .wa-float svg { width: 22px; height: 22px; }
     .wa-float .wa-ring { position: absolute; inset: 0; border-radius: 999px; border: 2px solid var(--whatsapp); animation: waRing 2.2s infinite; pointer-events: none; }
     @keyframes waRing { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(1.25); opacity: 0; } }
+
+    /* Mobile sticky trial bar — primary conversion path within thumb reach */
+    #mobile-cta-bar {
+      display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 998;
+      background: rgba(255,255,255,.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--gray-line);
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+      gap: 10px; box-shadow: 0 -8px 24px rgba(15,23,42,.08);
+    }
+    #mobile-cta-bar .btn { min-height: 48px; padding: 12px 14px; font-size: 15px; }
+    #mobile-cta-bar .cta-trial { flex: 1; }
+    #mobile-cta-bar .cta-wa { width: 54px; padding: 12px; flex-shrink: 0; }
+    #mobile-cta-bar.hidden-by-contact { display: none !important; }
+    @media (max-width: 768px) {
+      #mobile-cta-bar { display: flex; }
+      .wa-float { display: none; }
+      body { padding-bottom: 76px; }
+      .float-stack { bottom: calc(90px + env(safe-area-inset-bottom, 0px)); }
+    }
 
     /* Chat modal */
     #chat-overlay { display: none; position: fixed; inset: 0; background: rgba(15,23,42,.55); z-index: 1000; align-items: flex-end; justify-content: flex-end; padding: 24px; }
@@ -1265,7 +1280,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:12px;">
-      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Book Free Trial</a>
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Book Your Free Trial</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -1274,14 +1289,14 @@
 </header>
 
 <!-- Mobile Menu -->
-<div id="mobile-menu" aria-label="Mobile navigation">
+<div id="mobile-menu" role="navigation" aria-label="Mobile navigation">
   <a href="#why-us" class="mobile-link">Why Choose Us</a>
   <a href="#courses" class="mobile-link">Courses</a>
   <a href="#teacher" class="mobile-link">About Teacher</a>
   <a href="#safety" class="mobile-link">Child Safety</a>
   <a href="#pricing" class="mobile-link">Pricing</a>
   <a href="#faq" class="mobile-link">FAQ</a>
-  <a href="#contact" class="btn btn-primary mobile-link">Book Free Trial</a>
+  <a href="#contact" class="btn btn-primary mobile-link">Book Your Free Trial</a>
   <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener" class="btn btn-whatsapp mobile-link">
     <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp
   </a>
@@ -1300,28 +1315,28 @@
       <h1 id="hero-title">Mizan Academy<br><span class="hl">Learn Quran Online From Home</span></h1>
       <p class="hero-sub">Personalised one-to-one Quran and Tajweed classes for kids and adults. Learn with a qualified teacher from the comfort of your home.</p>
       
-      <div class="hero-trust-grid" aria-label="Key Trust Indicators">
-        <div class="hero-trust-item">
+      <div class="hero-trust-grid" role="list" aria-label="Key trust indicators">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>One-to-One Classes</span>
         </div>
-        <div class="hero-trust-item">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>Quran, Tajweed &amp; Qaida</span>
         </div>
-        <div class="hero-trust-item">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>Flexible International Timings</span>
         </div>
-        <div class="hero-trust-item">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>Kids &amp; Adults Welcome</span>
         </div>
-        <div class="hero-trust-item">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>Free Trial Class</span>
         </div>
-        <div class="hero-trust-item">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>UK &middot; USA &middot; Canada</span>
         </div>
@@ -1330,7 +1345,7 @@
       <div class="hero-btns">
         <a href="#contact" class="btn btn-primary">
           <svg width="19" height="19" aria-hidden="true"><use href="#i-cal"/></svg>
-          Book Free Trial
+          Book Your Free Trial
         </a>
         <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener" class="btn btn-whatsapp">
           <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>
@@ -1365,15 +1380,14 @@
         <div class="portrait-nameplate">
           <div class="nameplate-verified">
             <strong>Ubaid ur Rahman</strong>
-            <span class="verified-pill"><svg viewBox="0 0 20 20" fill="currentColor" class="v-icon" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Verified Teacher</span>
           </div>
-          <small>Quran &amp; Tajweed Teacher</small>
+          <small>Quran &amp; Tajweed Teacher &middot; Hafiz-e-Quran</small>
         </div>
       </div>
-      <div class="trust-badges" aria-label="Teacher qualifications">
-        <span class="trust-badge"><svg aria-hidden="true"><use href="#i-shield"/></svg> Fazil Graduate</span>
-        <span class="trust-badge"><svg aria-hidden="true"><use href="#i-starq"/></svg> Hafiz-e-Quran</span>
-        <span class="trust-badge"><svg aria-hidden="true"><use href="#i-globe"/></svg> Teaching Students Worldwide</span>
+      <div class="trust-badges" role="list" aria-label="Teacher qualifications">
+        <span class="trust-badge" role="listitem"><svg aria-hidden="true"><use href="#i-shield"/></svg> Fazil Graduate</span>
+        <span class="trust-badge" role="listitem"><svg aria-hidden="true"><use href="#i-starq"/></svg> Hafiz-e-Quran</span>
+        <span class="trust-badge" role="listitem"><svg aria-hidden="true"><use href="#i-globe"/></svg> UK &middot; USA &middot; Canada Families</span>
       </div>
     </div>
   </div>
@@ -1416,7 +1430,7 @@
         <!-- Credentials below image -->
         <div class="teacher-credentials-card">
           <div class="teacher-cred-header">
-            <h3 class="teacher-cred-name">Ubaid ur Rahman</h3>
+            <p class="teacher-cred-name">Ubaid ur Rahman</p>
             <span class="teacher-cred-tag">Quran &amp; Tajweed Teacher</span>
           </div>
           <div class="teacher-cred-role">Hafiz-e-Quran &middot; Fazil Graduate</div>
@@ -1439,7 +1453,7 @@
         <p class="teacher-bio">Ubaid ur Rahman is a <strong>Hafiz-e-Quran</strong> (he has memorised the entire Quran) and a <strong>Fazil Graduate</strong> (a formal qualification in classical Islamic scholarship). He also holds expertise in <strong>Saba Qiraat</strong> &mdash; the seven authentic styles of Quranic recitation, a rare qualification held by very few teachers worldwide. He has years of experience teaching Quran reading, Tajweed and Islamic Studies. Lessons are calm, patient and structured &mdash; tailored to each student's pace, age and goals. For parents outside Pakistan, think of his qualifications like a recognised Islamic teacher's credentials: he has studied with qualified scholars and has formal training in teaching the Quran.</p>
 
         <div style="margin-bottom: 22px;">
-          <h4 style="font-size: 14.5px; font-weight: 700; color: var(--navy); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em;">Core Subject Areas:</h4>
+          <h3 style="font-size: 14.5px; font-weight: 700; color: var(--navy); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em;">Core Subject Areas:</h3>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
             <span class="trust-badge" style="box-shadow:none; padding: 7px 14px; font-size: 13.5px;"><svg aria-hidden="true"><use href="#i-book"/></svg> <strong>Quran</strong> &mdash; Nazra &amp; Fluent Recitation</span>
             <span class="trust-badge" style="box-shadow:none; padding: 7px 14px; font-size: 13.5px;"><svg aria-hidden="true"><use href="#i-starq"/></svg> <strong>Qaida</strong> &mdash; Arabic Alphabet Foundations</span>
@@ -1468,7 +1482,7 @@
 
         <div class="hero-btns" style="margin-bottom:0;">
           <a href="#contact" class="btn btn-primary btn-sm">
-            <svg width="18" height="18" aria-hidden="true"><use href="#i-cal"/></svg> Book Free Trial
+            <svg width="18" height="18" aria-hidden="true"><use href="#i-cal"/></svg> Book Your Free Trial
           </a>
           <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20ask%20the%20teacher%20about%20classes" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
             <svg width="18" height="18" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp
@@ -1556,7 +1570,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Waqf (stopping) and pronunciation rules</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Quran%20Reading%20(Nazra)%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1573,7 +1587,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Smooth transition into reading the Quran</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Noorani%20Qaida%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1590,7 +1604,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Fluent, melodious &amp; accurate recitation for all levels</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Tajweed%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1607,7 +1621,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Long-term memory retention techniques</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Quran%20Memorization%20(Hifz)%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1624,7 +1638,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Seerah &amp; stories of the Sahabah, character building</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Islamic%20Studies%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1641,7 +1655,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Functional Arabic for daily communication</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Arabic%20Basics%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1738,9 +1752,9 @@
         </ul>
       </div>
       <div class="trial-actions">
-        <a href="#contact" class="btn btn-primary">Book Free Trial</a>
+        <a href="#contact" class="btn btn-primary">Book Your Free Trial</a>
         <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener" class="btn btn-whatsapp">
-          <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg> Book via WhatsApp
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp
         </a>
         <p class="trial-fineprint">Usually scheduled within 24&ndash;48 hours &middot; Zoom or Google Meet</p>
       </div>
@@ -1859,7 +1873,7 @@
       </details>
       <details class="faq-item">
         <summary>Do you teach adults?</summary>
-        <p class="faq-a">Yes. A large portion of our students are adult professionals, university students, parents, and reverts who wish to learn Quran reading, correct their Tajweed, or study Islamic basics at their own schedule.</p>
+        <p class="faq-a">Yes. We warmly welcome adult learners &mdash; including professionals, university students, parents and reverts who wish to learn Quran reading, correct their Tajweed, or study Islamic basics at their own schedule.</p>
       </details>
       <details class="faq-item">
         <summary>What is included in the free trial?</summary>
@@ -1887,7 +1901,7 @@
       </details>
       <details class="faq-item">
         <summary>How long is each class?</summary>
-        <p class="faq-a">Each class is 45 minutes &mdash; a duration that keeps lessons focused without tiring young learners. Depending on the plan you choose, students have 2, 3, or 5 classes per week.</p>
+        <p class="faq-a">Classes are 30 to 45 minutes &mdash; short enough to keep young learners focused, long enough to make real progress. Depending on the plan you choose, students have 2, 3, or 5 classes per week.</p>
       </details>
       <details class="faq-item">
         <summary>How often are classes held?</summary>
@@ -1933,37 +1947,54 @@
           <div class="form-row">
             <div class="form-group">
               <label for="f-parent">Parent Name <span class="req" aria-hidden="true">*</span></label>
-              <input type="text" id="f-parent" name="parent" placeholder="e.g. Aisha Khan" autocomplete="name" required />
-              <p class="form-error">Please enter your name.</p>
+              <input type="text" id="f-parent" name="parent" placeholder="e.g. Aisha Khan" autocomplete="name" required aria-describedby="e-parent" />
+              <p class="form-error" id="e-parent">Please enter your name.</p>
             </div>
             <div class="form-group">
               <label for="f-student">Student Name <span class="req" aria-hidden="true">*</span></label>
-              <input type="text" id="f-student" name="student" placeholder="e.g. Yusuf" autocomplete="off" required />
-              <p class="form-error">Please enter the student's name.</p>
+              <input type="text" id="f-student" name="student" placeholder="e.g. Yusuf" autocomplete="off" required aria-describedby="e-student" />
+              <p class="form-error" id="e-student">Please enter the student's name.</p>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="f-age">Student Age <span class="req" aria-hidden="true">*</span></label>
-              <input type="number" id="f-age" name="age" min="3" max="99" placeholder="e.g. 8" required inputmode="numeric" />
-              <p class="form-error">Please enter an age between 3 and 99.</p>
+              <input type="number" id="f-age" name="age" min="3" max="99" placeholder="e.g. 8" required inputmode="numeric" aria-describedby="e-age" />
+              <p class="form-error" id="e-age">Please enter an age between 3 and 99.</p>
             </div>
             <div class="form-group">
               <label for="f-country">Country <span class="req" aria-hidden="true">*</span></label>
-              <select id="f-country" name="country" required>
+              <select id="f-country" name="country" required aria-describedby="e-country">
                 <option value="">Select country&hellip;</option>
                 <option>United Kingdom</option>
                 <option>United States</option>
                 <option>Canada</option>
                 <option>Other</option>
               </select>
-              <p class="form-error">Please select your country.</p>
+              <p class="form-error" id="e-country">Please select your country.</p>
             </div>
           </div>
           <div class="form-group">
             <label for="f-phone">WhatsApp Number <span class="req" aria-hidden="true">*</span></label>
-            <input type="tel" id="f-phone" name="phone" placeholder="+44 7123 456789" autocomplete="tel" required />
-            <p class="form-error">Please enter a valid WhatsApp number (digits, + and spaces).</p>
+            <input type="tel" id="f-phone" name="phone" placeholder="+44 7123 456789" autocomplete="tel" required aria-describedby="e-phone" />
+            <p class="form-error" id="e-phone">Please enter a valid WhatsApp number (digits, + and spaces).</p>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-level">Current Quran Level</label>
+              <select id="f-level" name="level">
+                <option value="">Not sure &mdash; the trial will assess this</option>
+                <option>Total beginner (no Arabic yet)</option>
+                <option>Learning Noorani Qaida</option>
+                <option>Reading the Quran (needs Tajweed)</option>
+                <option>Confident reader / improving recitation</option>
+                <option>Memorisation (Hifz) student</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-tz">City or Time Zone <span class="opt">(optional)</span></label>
+              <input type="text" id="f-tz" name="timezone" placeholder="e.g. London / GMT, Toronto / EST" autocomplete="off" />
+            </div>
           </div>
           <div class="form-row">
             <div class="form-group">
@@ -1989,9 +2020,17 @@
               </select>
             </div>
           </div>
+          <div class="form-group">
+            <label for="f-days">Preferred Days <span class="opt">(optional)</span></label>
+            <input type="text" id="f-days" name="days" placeholder="e.g. Mon, Wed, Sat" autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label for="f-message">Anything else we should know? <span class="opt">(optional)</span></label>
+            <textarea id="f-message" name="message" rows="3" placeholder="e.g. two siblings, learning goals, questions"></textarea>
+          </div>
           <button type="submit" class="btn btn-primary form-submit">
             <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>
-            Book Free Trial
+            Book Your Free Trial
           </button>
           <p class="form-note"><svg aria-hidden="true"><use href="#i-shield"/></svg> Your details go straight to our WhatsApp chat &mdash; never shared or sold.</p>
         </form>
@@ -1999,14 +2038,14 @@
 
       <div class="contact-side">
         <div class="contact-tile">
-          <h4>Prefer to chat directly?</h4>
+          <h3>Prefer to chat directly?</h3>
           <p>Message the teacher on WhatsApp &mdash; usually replies within a few hours.</p>
           <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener" class="btn btn-whatsapp">
             <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp
           </a>
         </div>
         <div class="contact-tile">
-          <h4>Contact Details</h4>
+          <h3>Contact Details</h3>
           <ul class="info-lines" style="margin-top:14px;">
             <li><span class="ico"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><a href="https://wa.me/923170203221" target="_blank" rel="noopener">+92 317 0203221 (WhatsApp)</a></li>
             <li><span class="ico"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><a href="mailto:usmanubaidurrehman@gmail.com">usmanubaidurrehman@gmail.com</a></li>
@@ -2090,7 +2129,8 @@
         </ul>
       </div>
     </div>
-    <p class="footer-bottom">&copy; 2026 <strong>Mizan Academy</strong> &middot; Teaching Quran with patience and care &middot; Serving families in the UK, USA and Canada</p>
+    <p class="footer-bottom">&copy; 2026 <strong>Mizan Academy</strong> &middot; Teaching Quran with patience and care &middot; Serving families in the UK, USA and Canada<br>
+      <a href="#safety" style="color:rgba(255,255,255,.65); text-decoration:none;">Child safety &amp; privacy</a> &middot; <a href="#faq" style="color:rgba(255,255,255,.65); text-decoration:none;">How payment works</a></p>
   </div>
 </footer>
 
@@ -2103,6 +2143,16 @@
     <span class="wa-ring" aria-hidden="true"></span>
     <svg aria-hidden="true"><use href="#i-wa"/></svg>
     <span class="label">WhatsApp</span>
+  </a>
+</div>
+
+<!-- ════════ MOBILE STICKY CTA BAR ════════ -->
+<div id="mobile-cta-bar">
+  <a href="#contact" class="btn btn-primary cta-trial">
+    <svg width="18" height="18" aria-hidden="true"><use href="#i-cal"/></svg> Book Your Free Trial
+  </a>
+  <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener" class="btn btn-whatsapp cta-wa" aria-label="Chat on WhatsApp">
+    <svg width="22" height="22" aria-hidden="true"><use href="#i-wa"/></svg>
   </a>
 </div>
 
@@ -2230,7 +2280,7 @@ var SITE = {
     }
     var ctaMsg = "Assalamu Alaikum, I would like to book a free trial class (" + plan.name + " — " + plan.cadence + ")";
     ctaHtml = "<a href=\"" + SITE.waLink(ctaMsg) + "\" target=\"_blank\" rel=\"noopener\" class=\"btn " +
-      (plan.featured ? "btn-primary" : "btn-outline") + "\">Book Free Trial</a>";
+      (plan.featured ? "btn-primary" : "btn-outline") + "\">Book Your Free Trial</a>";
     return "<div class=\"price-card" + (plan.featured ? " featured" : "") + "\">" +
       (plan.badge ? "<div class=\"price-badge\">" + plan.badge + "</div>" : "") +
       "<p class=\"price-label\">" + plan.name + "</p>" +
@@ -2299,20 +2349,34 @@ document.getElementById("chat-overlay").addEventListener("keydown", function (e)
 /* ── Mobile hamburger menu ── */
 var hamburger = document.getElementById("hamburger");
 var mobileMenu = document.getElementById("mobile-menu");
+var ctaBar = document.getElementById("mobile-cta-bar");
+/* Hide the sticky bar while the contact form itself is on screen */
+if (window.IntersectionObserver) {
+  new IntersectionObserver(function (entries) {
+    ctaBar.classList.toggle("hidden-by-contact", entries.some(function (en) { return en.isIntersecting; }));
+  }, { threshold: 0.15 }).observe(document.getElementById("contact"));
+}
+function closeMobileMenu() {
+  mobileMenu.classList.remove("open");
+  hamburger.classList.remove("active");
+  hamburger.setAttribute("aria-expanded", "false");
+  hamburger.setAttribute("aria-label", "Open menu");
+  document.body.style.overflow = "";
+  ctaBar.classList.remove("hidden-by-contact");
+}
 hamburger.addEventListener("click", function () {
   var open = mobileMenu.classList.toggle("open");
   hamburger.classList.toggle("active");
   hamburger.setAttribute("aria-expanded", open);
   hamburger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   document.body.style.overflow = open ? "hidden" : "";
+  ctaBar.classList.toggle("hidden-by-contact", open);
+});
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && mobileMenu.classList.contains("open")) { closeMobileMenu(); hamburger.focus(); }
 });
 document.querySelectorAll(".mobile-link").forEach(function (link) {
-  link.addEventListener("click", function () {
-    mobileMenu.classList.remove("open");
-    hamburger.classList.remove("active");
-    hamburger.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
-  });
+  link.addEventListener("click", closeMobileMenu);
 });
 
 /* ── Active nav highlighting ── */
@@ -2368,16 +2432,23 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   var country = field("f-country", function (v) { return !!v; });
   var phone = field("f-phone", function (v) { return /^[+\d][\d\s\-()]{6,19}$/.test(v); });
   if (!ok) return;
+  var level = document.getElementById("f-level").value;
+  var tz = document.getElementById("f-tz").value.trim();
   var course = document.getElementById("f-course").value;
   var time = document.getElementById("f-time").value;
+  var days = document.getElementById("f-days").value.trim();
+  var message = document.getElementById("f-message").value.trim();
   var text = "Assalamu Alaikum, I would like to book a free trial class." +
     "\n\nParent: " + parent +
-    "\nStudent: " + student +
-    "\nAge: " + age +
+    "\nStudent: " + student + " (age " + age + ")" +
     "\nCountry: " + country +
+    (tz ? "\nCity / Time zone: " + tz : "") +
     "\nWhatsApp: " + phone +
     "\nCourse: " + (course || "Not sure — please advise") +
-    "\nPreferred time: " + (time || "Any time works");
+    "\nCurrent level: " + (level || "Not sure — the trial will assess this") +
+    "\nPreferred time: " + (time || "Any time works") +
+    (days ? "\nPreferred days: " + days : "") +
+    (message ? "\nMessage: " + message : "");
   window.open(SITE.waLink(text), "_blank");
 });
 /* Clear inline errors as the user fixes each field */
