@@ -106,7 +106,7 @@ section[data-testid="stSidebar"] .stMarkdown {
     border-radius: 20px;
     padding: 0.4rem 1rem;
     margin: 0.2rem;
-    color: #8a7a4a;
+    color: #7a6728;
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 0.85rem;
     cursor: pointer;
@@ -120,7 +120,7 @@ section[data-testid="stSidebar"] .stMarkdown {
 .footer {
     text-align: center;
     padding: 1rem;
-    color: #8a7a4a;
+    color: #6b5b23;
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 0.75rem;
     margin-top: 2rem;
@@ -131,6 +131,29 @@ section[data-testid="stSidebar"] .stMarkdown {
 }
 .st-bb {
     color: #1e293b !important;
+}
+
+/* Chat bubbles — navy for the user, warm cream for the assistant (matches the site brand) */
+div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]) {
+    justify-content: flex-end;
+}
+div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]) [data-testid="stChatMessageContent"] {
+    background: #0f1b2d;
+    border-radius: 16px 16px 4px 16px;
+    padding: 10px 14px;
+    width: fit-content;
+    max-width: 85%;
+}
+div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]) [data-testid="stChatMessageContent"] p {
+    color: #ffffff !important;
+}
+div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarAssistant"]) [data-testid="stChatMessageContent"] {
+    background: #f4f1ea;
+    border: 1px solid #e6dfd3;
+    border-radius: 4px 16px 16px 16px;
+    padding: 10px 14px;
+    width: fit-content;
+    max-width: 88%;
 }
 </style>
 """, unsafe_allow_html=True)
