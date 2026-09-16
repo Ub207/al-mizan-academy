@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -89,7 +89,7 @@
         "name": "Do you teach adults?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. A large portion of our students are adult professionals, university students, parents, and reverts who wish to learn Quran reading, correct their Tajweed, or study Islamic basics at their own schedule."
+          "text": "Yes. We warmly welcome adult learners — including professionals, university students, parents and reverts who wish to learn Quran reading, correct their Tajweed, or study Islamic basics at their own schedule."
         }
       },
       {
@@ -134,7 +134,7 @@
       },
       {
         "@type": "Question",
-        "name": "Do you offer UK, USA, Canada friendly schedules?",
+        "name": "Do you offer UK / USA / Canada friendly schedules?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes. Classes are scheduled in your local time zone, whether that's the UK, USA, Canada, or elsewhere. When you message us, simply let us know your country and preferred times and we'll arrange a slot that works."
@@ -451,7 +451,6 @@
       font-size: 13.5px; font-weight: 600; color: var(--emerald-deep);
       box-shadow: var(--shadow-sm); margin-bottom: 22px;
     }
-    .hero-trust-pill .stars { color: #F59E0B; letter-spacing: 1px; font-size: 14px; }
     .hero h1 {
       font-size: clamp(2.1rem, 4.8vw, 3.4rem); font-weight: 800;
       letter-spacing: -.02em; margin-bottom: 18px;
@@ -1031,7 +1030,7 @@
       background: var(--white); border: 1px solid var(--gray-line); border-radius: var(--radius);
       padding: 24px 26px;
     }
-    .contact-tile h4 { font-size: 15px; font-weight: 800; margin-bottom: 4px; }
+    .contact-tile h3 { font-size: 15px; font-weight: 800; margin-bottom: 4px; }
     .contact-tile p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
     .contact-tile .btn { width: 100%; }
     .info-lines { list-style: none; display: flex; flex-direction: column; gap: 13px; }
@@ -1281,7 +1280,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:12px;">
-      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Book Free Trial</a>
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Book Your Free Trial</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -1297,7 +1296,7 @@
   <a href="#safety" class="mobile-link">Child Safety</a>
   <a href="#pricing" class="mobile-link">Pricing</a>
   <a href="#faq" class="mobile-link">FAQ</a>
-  <a href="#contact" class="btn btn-primary mobile-link">Book Free Trial</a>
+  <a href="#contact" class="btn btn-primary mobile-link">Book Your Free Trial</a>
   <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener" class="btn btn-whatsapp mobile-link">
     <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp
   </a>
@@ -1346,7 +1345,7 @@
       <div class="hero-btns">
         <a href="#contact" class="btn btn-primary">
           <svg width="19" height="19" aria-hidden="true"><use href="#i-cal"/></svg>
-          Book Free Trial
+          Book Your Free Trial
         </a>
         <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener" class="btn btn-whatsapp">
           <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>
@@ -1385,10 +1384,10 @@
           <small>Quran &amp; Tajweed Teacher &middot; Hafiz-e-Quran</small>
         </div>
       </div>
-      <div class="trust-badges" aria-label="Teacher qualifications">
-        <span class="trust-badge"><svg aria-hidden="true"><use href="#i-shield"/></svg> Fazil Graduate</span>
-        <span class="trust-badge"><svg aria-hidden="true"><use href="#i-starq"/></svg> Hafiz-e-Quran</span>
-        <span class="trust-badge"><svg aria-hidden="true"><use href="#i-globe"/></svg> Teaching Students Worldwide</span>
+      <div class="trust-badges" role="list" aria-label="Teacher qualifications">
+        <span class="trust-badge" role="listitem"><svg aria-hidden="true"><use href="#i-shield"/></svg> Fazil Graduate</span>
+        <span class="trust-badge" role="listitem"><svg aria-hidden="true"><use href="#i-starq"/></svg> Hafiz-e-Quran</span>
+        <span class="trust-badge" role="listitem"><svg aria-hidden="true"><use href="#i-globe"/></svg> UK &middot; USA &middot; Canada Families</span>
       </div>
     </div>
   </div>
@@ -1431,7 +1430,7 @@
         <!-- Credentials below image -->
         <div class="teacher-credentials-card">
           <div class="teacher-cred-header">
-            <h3 class="teacher-cred-name">Ubaid ur Rahman</h3>
+            <p class="teacher-cred-name">Ubaid ur Rahman</p>
             <span class="teacher-cred-tag">Quran &amp; Tajweed Teacher</span>
           </div>
           <div class="teacher-cred-role">Hafiz-e-Quran &middot; Fazil Graduate</div>
@@ -1454,7 +1453,7 @@
         <p class="teacher-bio">Ubaid ur Rahman is a <strong>Hafiz-e-Quran</strong> (he has memorised the entire Quran) and a <strong>Fazil Graduate</strong> (a formal qualification in classical Islamic scholarship). He also holds expertise in <strong>Saba Qiraat</strong> &mdash; the seven authentic styles of Quranic recitation, a rare qualification held by very few teachers worldwide. He has years of experience teaching Quran reading, Tajweed and Islamic Studies. Lessons are calm, patient and structured &mdash; tailored to each student's pace, age and goals. For parents outside Pakistan, think of his qualifications like a recognised Islamic teacher's credentials: he has studied with qualified scholars and has formal training in teaching the Quran.</p>
 
         <div style="margin-bottom: 22px;">
-          <h4 style="font-size: 14.5px; font-weight: 700; color: var(--navy); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em;">Core Subject Areas:</h4>
+          <h3 style="font-size: 14.5px; font-weight: 700; color: var(--navy); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em;">Core Subject Areas:</h3>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
             <span class="trust-badge" style="box-shadow:none; padding: 7px 14px; font-size: 13.5px;"><svg aria-hidden="true"><use href="#i-book"/></svg> <strong>Quran</strong> &mdash; Nazra &amp; Fluent Recitation</span>
             <span class="trust-badge" style="box-shadow:none; padding: 7px 14px; font-size: 13.5px;"><svg aria-hidden="true"><use href="#i-starq"/></svg> <strong>Qaida</strong> &mdash; Arabic Alphabet Foundations</span>
@@ -1483,7 +1482,7 @@
 
         <div class="hero-btns" style="margin-bottom:0;">
           <a href="#contact" class="btn btn-primary btn-sm">
-            <svg width="18" height="18" aria-hidden="true"><use href="#i-cal"/></svg> Book Free Trial
+            <svg width="18" height="18" aria-hidden="true"><use href="#i-cal"/></svg> Book Your Free Trial
           </a>
           <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20ask%20the%20teacher%20about%20classes" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
             <svg width="18" height="18" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp
@@ -1571,7 +1570,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Waqf (stopping) and pronunciation rules</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Quran%20Reading%20(Nazra)%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1588,7 +1587,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Smooth transition into reading the Quran</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Noorani%20Qaida%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1605,7 +1604,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Fluent, melodious &amp; accurate recitation for all levels</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Tajweed%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1622,7 +1621,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Long-term memory retention techniques</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Quran%20Memorization%20(Hifz)%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1639,7 +1638,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Seerah &amp; stories of the Sahabah, character building</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Islamic%20Studies%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1656,7 +1655,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg> Functional Arabic for daily communication</li>
         </ul>
         <div class="course-actions">
-          <a class="course-link" href="#contact">Book Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="course-link" href="#contact">Book Your Free Trial <svg aria-hidden="true"><use href="#i-chev"/></svg></a>
           <a class="course-wa-btn" href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20Arabic%20Basics%20classes" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
         </div>
       </article>
@@ -1753,9 +1752,9 @@
         </ul>
       </div>
       <div class="trial-actions">
-        <a href="#contact" class="btn btn-primary">Book Free Trial</a>
+        <a href="#contact" class="btn btn-primary">Book Your Free Trial</a>
         <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener" class="btn btn-whatsapp">
-          <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg> Book via WhatsApp
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp
         </a>
         <p class="trial-fineprint">Usually scheduled within 24&ndash;48 hours &middot; Zoom or Google Meet</p>
       </div>
@@ -1874,7 +1873,7 @@
       </details>
       <details class="faq-item">
         <summary>Do you teach adults?</summary>
-        <p class="faq-a">Yes. A large portion of our students are adult professionals, university students, parents, and reverts who wish to learn Quran reading, correct their Tajweed, or study Islamic basics at their own schedule.</p>
+        <p class="faq-a">Yes. We warmly welcome adult learners &mdash; including professionals, university students, parents and reverts who wish to learn Quran reading, correct their Tajweed, or study Islamic basics at their own schedule.</p>
       </details>
       <details class="faq-item">
         <summary>What is included in the free trial?</summary>
@@ -2039,14 +2038,14 @@
 
       <div class="contact-side">
         <div class="contact-tile">
-          <h4>Prefer to chat directly?</h4>
+          <h3>Prefer to chat directly?</h3>
           <p>Message the teacher on WhatsApp &mdash; usually replies within a few hours.</p>
           <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener" class="btn btn-whatsapp">
             <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp
           </a>
         </div>
         <div class="contact-tile">
-          <h4>Contact Details</h4>
+          <h3>Contact Details</h3>
           <ul class="info-lines" style="margin-top:14px;">
             <li><span class="ico"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><a href="https://wa.me/923170203221" target="_blank" rel="noopener">+92 317 0203221 (WhatsApp)</a></li>
             <li><span class="ico"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><a href="mailto:usmanubaidurrehman@gmail.com">usmanubaidurrehman@gmail.com</a></li>
@@ -2281,7 +2280,7 @@ var SITE = {
     }
     var ctaMsg = "Assalamu Alaikum, I would like to book a free trial class (" + plan.name + " — " + plan.cadence + ")";
     ctaHtml = "<a href=\"" + SITE.waLink(ctaMsg) + "\" target=\"_blank\" rel=\"noopener\" class=\"btn " +
-      (plan.featured ? "btn-primary" : "btn-outline") + "\">Book Free Trial</a>";
+      (plan.featured ? "btn-primary" : "btn-outline") + "\">Book Your Free Trial</a>";
     return "<div class=\"price-card" + (plan.featured ? " featured" : "") + "\">" +
       (plan.badge ? "<div class=\"price-badge\">" + plan.badge + "</div>" : "") +
       "<p class=\"price-label\">" + plan.name + "</p>" +
