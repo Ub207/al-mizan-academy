@@ -1,8 +1,7 @@
-# 🕌 Al-Mizan Online Quran Academy
+# 🕌 Mizan Academy
 
-> Marketing website **+** RAG-powered AI assistant for **Al-Mizan Online Quran Academy** — founded by **Qari Hafiz Ubaid ur Rehman**, a certified Hafiz, Aalim, and rare *Saba Qira'at* (Seven Styles of Recitation) specialist with Ijazah and 15+ years of teaching experience.
+> Marketing website **+** RAG-powered AI assistant for **Mizan Academy** (also known as Al-Mizan Online Quran Academy) — one-to-one online Quran classes for kids and adults, taught by **Ubaid ur Rahman** (Hafiz-e-Quran, Fazil Graduate, Saba Qira'at specialist).
 
-![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-app-FF4B4B?logo=streamlit&logoColor=white)
 ![Groq](https://img.shields.io/badge/Groq-GPT--OSS%20120B-F55036)
 ![FAISS](https://img.shields.io/badge/FAISS-vector%20search-0467DF)
@@ -27,13 +26,13 @@ The website embeds the chatbot in an `<iframe>`, so visitors can chat with the a
 ## ✨ Features
 
 - **24/7 AI assistant** for course, pricing, scheduling, and enrollment questions
-- **Grounded answers (RAG)** — replies come from a curated knowledge base, so pricing and course details aren't hallucinated
-- **Knows the full catalogue** — 18 courses across 5 categories, plus the *Saba Qira'at* and *Ijazah* specializations
+- **Grounded answers (RAG)** — replies come from a curated knowledge base, so course details aren't hallucinated
+- **Knows the full catalogue** — courses across Quran, Tajweed, Translation, Islamic Studies, and Arabic, plus the *Saba Qira'at* and *Ijazah* specializations
 - **Typo / transliteration tolerant** — understands variations like `gardan` → `Gardaan`
 - **Warm, culturally-aware tone** with natural Islamic greetings
 - **Stays in its lane** — politely redirects religious rulings (Fatwa) to qualified scholars
 - **Free-trial guidance** — nudges prospective students toward booking a free class
-- **Elegant, responsive website** with the chatbot embedded inline
+- **Responsive, accessible, SEO-ready website** with the chatbot embedded inline
 
 ## 🧠 How the AI assistant works (RAG)
 
@@ -70,6 +69,8 @@ al-mizan-academy/
 ├── assets/                     <- Teacher portraits (WebP + JPEG, 3 sizes) + OG cover
 ├── app.py                      <- RAG AI chatbot (Streamlit + Groq)
 ├── quran_academy_kb.txt        <- Chatbot knowledge base (Q&A format)
+├── robots.txt                  <- Crawl rules + sitemap reference
+├── sitemap.xml                 <- Site sitemap
 ├── requirements.txt            <- Python dependencies
 ├── .streamlit/
 │   └── secrets.toml.example    <- API-key template for Streamlit Cloud
@@ -114,7 +115,7 @@ streamlit run app.py
 
 ### Connect the two
 
-The website embeds the chatbot via an `<iframe>`. The Streamlit URL lives in one config object at the top of `index.html`'s `<script>` — `SITE.chatbotUrl` — plus the iframe `src` in the `#chatbot` section and two "open in new tab" links. Update them together if the deployment URL changes. `SITE.whatsappNumber` and `SITE.pricing` are config-only too.
+The website embeds the chatbot via an `<iframe>`. The Streamlit URL lives in one config object at the top of `index.html`'s `<script>` — `SITE.chatbotUrl` — plus the iframe `src` in the `#chatbot` section and two "open in new tab" links. Update them together if the deployment URL changes. `SITE.whatsappNumber`, `SITE.pricing`, and `SITE.analytics` are config-only too.
 
 ## 📚 Updating the knowledge base (important)
 
@@ -123,6 +124,7 @@ The assistant answers from **`quran_academy_kb.txt`**, *not* from the website. *
 - **Keep the `Q:` / `A:` format.** The loader chunks the KB by splitting on lines that start with `Q:` (one chunk per Q&A pair). Breaking that structure silently degrades retrieval quality.
 - **Refresh the cache after editing.** The KB and its embeddings are cached (`@st.cache_resource`), so changes won't appear until you **⋮ → Clear cache** (or restart the app).
 - **New/renamed course?** Update it in **both** `quran_academy_kb.txt` **and** the course catalogue in the system prompt inside `app.py`, so the bot always recognizes it.
+- **Pricing is quote-based.** Plans are 2, 3, or 5 classes per week; families receive a personalised quote. Do not state fixed prices on the site or in the KB — ask the owner for current rates before adding them.
 
 ## 📞 Contact
 
@@ -132,4 +134,4 @@ The assistant answers from **`quran_academy_kb.txt`**, *not* from the website. *
 
 ---
 
-© 2026 Al-Mizan Online Quran Academy — Qari Hafiz Ubaid ur Rehman. Built with ❤️ using Streamlit & Groq AI.
+© 2026 Mizan Academy (Al-Mizan Online Quran Academy) — Ubaid ur Rahman. Built with ❤️ using Streamlit & Groq AI.

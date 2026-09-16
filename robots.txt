@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ub207.github.io/al-mizan-academy/sitemap.xml
