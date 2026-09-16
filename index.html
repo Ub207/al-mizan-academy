@@ -59,7 +59,7 @@
       "@type": "Person",
       "name": "Ubaid ur Rahman",
       "jobTitle": "Founder & Lead Quran Teacher",
-      "description": "Fazil graduate with extensive Quran teaching experience, teaching students worldwide online."
+      "description": "Hafiz-e-Quran and Fazil graduate who teaches Quran, Tajweed, Qaida, Arabic and Islamic Studies online to students worldwide."
     },
     "makesOffer": [
       { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Quran Reading (Nazra)", "description": "Learn to read the Holy Quran fluently and accurately with proper pronunciation." } },
@@ -145,7 +145,7 @@
         "name": "How long is each class?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Each class is 45 minutes — a duration that keeps lessons focused without tiring young learners. Depending on the plan you choose, students have 2, 3, or 5 classes per week."
+          "text": "Classes are 30 to 45 minutes — short enough to keep young learners focused, long enough to make real progress. Depending on the plan you choose, students have 2, 3, or 5 classes per week."
         }
       },
       {
@@ -501,13 +501,6 @@
     .portrait-nameplate strong {
       display: inline-block; font-family: var(--heading); font-size: 15px; color: var(--navy); font-weight: 800;
     }
-    .verified-pill {
-      display: inline-flex; align-items: center; gap: 4px;
-      font-size: 11px; font-weight: 700; color: var(--emerald-dark);
-      background: var(--emerald-tint); border: 1px solid var(--emerald-line);
-      padding: 2px 7px; border-radius: 999px;
-    }
-    .verified-pill svg { width: 12px; height: 12px; color: var(--emerald); }
     .portrait-nameplate small { display: block; font-size: 11.5px; color: var(--muted); margin-top: 1px; font-weight: 500; }
 
     .float-badge {
@@ -1015,15 +1008,17 @@
     .form-group { margin-bottom: 16px; }
     .form-group label { display: block; font-size: 13.5px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
     .form-group label .req { color: var(--emerald-dark); }
-    .form-group input, .form-group select {
+    .form-group label .opt { color: var(--muted); font-weight: 500; }
+    .form-group input, .form-group select, .form-group textarea {
       width: 100%; padding: 13px 14px; border: 1.5px solid var(--gray-line); border-radius: 10px;
       font-size: 15px; font-family: var(--body); color: var(--ink); background: var(--white);
       transition: border-color .2s; min-height: 48px;
     }
-    .form-group input:focus, .form-group select:focus { border-color: var(--emerald); outline-offset: 0; }
-    .form-group input::placeholder { color: #64748B; }
+    .form-group textarea { min-height: 88px; resize: vertical; line-height: 1.55; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--emerald); outline-offset: 0; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #64748B; }
     .form-error { display: none; font-size: 12.5px; color: #DC2626; margin-top: 5px; font-weight: 500; }
-    .form-group.invalid input, .form-group.invalid select { border-color: #DC2626; }
+    .form-group.invalid input, .form-group.invalid select, .form-group.invalid textarea { border-color: #DC2626; }
     .form-group.invalid .form-error { display: block; }
     .form-submit { width: 100%; margin-top: 6px; }
     .form-note { font-size: 12.5px; color: var(--muted); text-align: center; margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 6px; }
@@ -1274,7 +1269,7 @@
 </header>
 
 <!-- Mobile Menu -->
-<div id="mobile-menu" aria-label="Mobile navigation">
+<div id="mobile-menu" role="navigation" aria-label="Mobile navigation">
   <a href="#why-us" class="mobile-link">Why Choose Us</a>
   <a href="#courses" class="mobile-link">Courses</a>
   <a href="#teacher" class="mobile-link">About Teacher</a>
@@ -1300,28 +1295,28 @@
       <h1 id="hero-title">Mizan Academy<br><span class="hl">Learn Quran Online From Home</span></h1>
       <p class="hero-sub">Personalised one-to-one Quran and Tajweed classes for kids and adults. Learn with a qualified teacher from the comfort of your home.</p>
       
-      <div class="hero-trust-grid" aria-label="Key Trust Indicators">
-        <div class="hero-trust-item">
+      <div class="hero-trust-grid" role="list" aria-label="Key trust indicators">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>One-to-One Classes</span>
         </div>
-        <div class="hero-trust-item">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>Quran, Tajweed &amp; Qaida</span>
         </div>
-        <div class="hero-trust-item">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>Flexible International Timings</span>
         </div>
-        <div class="hero-trust-item">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>Kids &amp; Adults Welcome</span>
         </div>
-        <div class="hero-trust-item">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>Free Trial Class</span>
         </div>
-        <div class="hero-trust-item">
+        <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
           <span>UK &middot; USA &middot; Canada</span>
         </div>
@@ -1365,9 +1360,8 @@
         <div class="portrait-nameplate">
           <div class="nameplate-verified">
             <strong>Ubaid ur Rahman</strong>
-            <span class="verified-pill"><svg viewBox="0 0 20 20" fill="currentColor" class="v-icon" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Verified Teacher</span>
           </div>
-          <small>Quran &amp; Tajweed Teacher</small>
+          <small>Quran &amp; Tajweed Teacher &middot; Hafiz-e-Quran</small>
         </div>
       </div>
       <div class="trust-badges" aria-label="Teacher qualifications">
@@ -1887,7 +1881,7 @@
       </details>
       <details class="faq-item">
         <summary>How long is each class?</summary>
-        <p class="faq-a">Each class is 45 minutes &mdash; a duration that keeps lessons focused without tiring young learners. Depending on the plan you choose, students have 2, 3, or 5 classes per week.</p>
+        <p class="faq-a">Classes are 30 to 45 minutes &mdash; short enough to keep young learners focused, long enough to make real progress. Depending on the plan you choose, students have 2, 3, or 5 classes per week.</p>
       </details>
       <details class="faq-item">
         <summary>How often are classes held?</summary>
@@ -1933,37 +1927,54 @@
           <div class="form-row">
             <div class="form-group">
               <label for="f-parent">Parent Name <span class="req" aria-hidden="true">*</span></label>
-              <input type="text" id="f-parent" name="parent" placeholder="e.g. Aisha Khan" autocomplete="name" required />
-              <p class="form-error">Please enter your name.</p>
+              <input type="text" id="f-parent" name="parent" placeholder="e.g. Aisha Khan" autocomplete="name" required aria-describedby="e-parent" />
+              <p class="form-error" id="e-parent">Please enter your name.</p>
             </div>
             <div class="form-group">
               <label for="f-student">Student Name <span class="req" aria-hidden="true">*</span></label>
-              <input type="text" id="f-student" name="student" placeholder="e.g. Yusuf" autocomplete="off" required />
-              <p class="form-error">Please enter the student's name.</p>
+              <input type="text" id="f-student" name="student" placeholder="e.g. Yusuf" autocomplete="off" required aria-describedby="e-student" />
+              <p class="form-error" id="e-student">Please enter the student's name.</p>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="f-age">Student Age <span class="req" aria-hidden="true">*</span></label>
-              <input type="number" id="f-age" name="age" min="3" max="99" placeholder="e.g. 8" required inputmode="numeric" />
-              <p class="form-error">Please enter an age between 3 and 99.</p>
+              <input type="number" id="f-age" name="age" min="3" max="99" placeholder="e.g. 8" required inputmode="numeric" aria-describedby="e-age" />
+              <p class="form-error" id="e-age">Please enter an age between 3 and 99.</p>
             </div>
             <div class="form-group">
               <label for="f-country">Country <span class="req" aria-hidden="true">*</span></label>
-              <select id="f-country" name="country" required>
+              <select id="f-country" name="country" required aria-describedby="e-country">
                 <option value="">Select country&hellip;</option>
                 <option>United Kingdom</option>
                 <option>United States</option>
                 <option>Canada</option>
                 <option>Other</option>
               </select>
-              <p class="form-error">Please select your country.</p>
+              <p class="form-error" id="e-country">Please select your country.</p>
             </div>
           </div>
           <div class="form-group">
             <label for="f-phone">WhatsApp Number <span class="req" aria-hidden="true">*</span></label>
-            <input type="tel" id="f-phone" name="phone" placeholder="+44 7123 456789" autocomplete="tel" required />
-            <p class="form-error">Please enter a valid WhatsApp number (digits, + and spaces).</p>
+            <input type="tel" id="f-phone" name="phone" placeholder="+44 7123 456789" autocomplete="tel" required aria-describedby="e-phone" />
+            <p class="form-error" id="e-phone">Please enter a valid WhatsApp number (digits, + and spaces).</p>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-level">Current Quran Level</label>
+              <select id="f-level" name="level">
+                <option value="">Not sure &mdash; the trial will assess this</option>
+                <option>Total beginner (no Arabic yet)</option>
+                <option>Learning Noorani Qaida</option>
+                <option>Reading the Quran (needs Tajweed)</option>
+                <option>Confident reader / improving recitation</option>
+                <option>Memorisation (Hifz) student</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-tz">City or Time Zone <span class="opt">(optional)</span></label>
+              <input type="text" id="f-tz" name="timezone" placeholder="e.g. London / GMT, Toronto / EST" autocomplete="off" />
+            </div>
           </div>
           <div class="form-row">
             <div class="form-group">
@@ -1989,9 +2000,17 @@
               </select>
             </div>
           </div>
+          <div class="form-group">
+            <label for="f-days">Preferred Days <span class="opt">(optional)</span></label>
+            <input type="text" id="f-days" name="days" placeholder="e.g. Mon, Wed, Sat" autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label for="f-message">Anything else we should know? <span class="opt">(optional)</span></label>
+            <textarea id="f-message" name="message" rows="3" placeholder="e.g. two siblings, learning goals, questions"></textarea>
+          </div>
           <button type="submit" class="btn btn-primary form-submit">
             <svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>
-            Book Free Trial
+            Book Your Free Trial
           </button>
           <p class="form-note"><svg aria-hidden="true"><use href="#i-shield"/></svg> Your details go straight to our WhatsApp chat &mdash; never shared or sold.</p>
         </form>
@@ -2090,7 +2109,8 @@
         </ul>
       </div>
     </div>
-    <p class="footer-bottom">&copy; 2026 <strong>Mizan Academy</strong> &middot; Teaching Quran with patience and care &middot; Serving families in the UK, USA and Canada</p>
+    <p class="footer-bottom">&copy; 2026 <strong>Mizan Academy</strong> &middot; Teaching Quran with patience and care &middot; Serving families in the UK, USA and Canada<br>
+      <a href="#safety" style="color:rgba(255,255,255,.65); text-decoration:none;">Child safety &amp; privacy</a> &middot; <a href="#faq" style="color:rgba(255,255,255,.65); text-decoration:none;">How payment works</a></p>
   </div>
 </footer>
 
@@ -2299,6 +2319,13 @@ document.getElementById("chat-overlay").addEventListener("keydown", function (e)
 /* ── Mobile hamburger menu ── */
 var hamburger = document.getElementById("hamburger");
 var mobileMenu = document.getElementById("mobile-menu");
+function closeMobileMenu() {
+  mobileMenu.classList.remove("open");
+  hamburger.classList.remove("active");
+  hamburger.setAttribute("aria-expanded", "false");
+  hamburger.setAttribute("aria-label", "Open menu");
+  document.body.style.overflow = "";
+}
 hamburger.addEventListener("click", function () {
   var open = mobileMenu.classList.toggle("open");
   hamburger.classList.toggle("active");
@@ -2306,13 +2333,11 @@ hamburger.addEventListener("click", function () {
   hamburger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   document.body.style.overflow = open ? "hidden" : "";
 });
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && mobileMenu.classList.contains("open")) { closeMobileMenu(); hamburger.focus(); }
+});
 document.querySelectorAll(".mobile-link").forEach(function (link) {
-  link.addEventListener("click", function () {
-    mobileMenu.classList.remove("open");
-    hamburger.classList.remove("active");
-    hamburger.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
-  });
+  link.addEventListener("click", closeMobileMenu);
 });
 
 /* ── Active nav highlighting ── */
@@ -2368,16 +2393,23 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   var country = field("f-country", function (v) { return !!v; });
   var phone = field("f-phone", function (v) { return /^[+\d][\d\s\-()]{6,19}$/.test(v); });
   if (!ok) return;
+  var level = document.getElementById("f-level").value;
+  var tz = document.getElementById("f-tz").value.trim();
   var course = document.getElementById("f-course").value;
   var time = document.getElementById("f-time").value;
+  var days = document.getElementById("f-days").value.trim();
+  var message = document.getElementById("f-message").value.trim();
   var text = "Assalamu Alaikum, I would like to book a free trial class." +
     "\n\nParent: " + parent +
-    "\nStudent: " + student +
-    "\nAge: " + age +
+    "\nStudent: " + student + " (age " + age + ")" +
     "\nCountry: " + country +
+    (tz ? "\nCity / Time zone: " + tz : "") +
     "\nWhatsApp: " + phone +
     "\nCourse: " + (course || "Not sure — please advise") +
-    "\nPreferred time: " + (time || "Any time works");
+    "\nCurrent level: " + (level || "Not sure — the trial will assess this") +
+    "\nPreferred time: " + (time || "Any time works") +
+    (days ? "\nPreferred days: " + days : "") +
+    (message ? "\nMessage: " + message : "");
   window.open(SITE.waLink(text), "_blank");
 });
 /* Clear inline errors as the user fixes each field */

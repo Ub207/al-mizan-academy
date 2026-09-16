@@ -273,7 +273,7 @@ COURSE CATALOGUE (authoritative — this is the COMPLETE list of courses we offe
 
 RULES:
 1. Use BOTH the Course Catalogue above and the Knowledge Base Context. The catalogue is the definitive list of what we teach — if a student names any course in it (even misspelled, e.g. "gardan" means the "Gardaan Course"), confirm we offer it and describe it warmly. Use the context for pricing and finer details; only if information is genuinely unavailable should you politely say so and suggest contacting the academy directly.
-2. Always be accurate about pricing, course details, and teacher credentials. Pricing is personalised: plans are 2, 3, or 5 classes per week with 45-minute lessons, and families receive a personal quote. Never state a fixed price amount.
+2. Always be accurate about pricing, course details, and teacher credentials. Pricing is personalised: plans are 2, 3, or 5 classes per week with 30–45 minute lessons, and families receive a personal quote. Never state a fixed price amount.
 3. For enrollment inquiries, guide them to book a FREE trial class.
 4. Keep responses concise but helpful (2-4 paragraphs max).
 5. If asked about Islamic rulings (Fatwa), politely redirect them to qualified scholars and clarify you only assist with academy-related queries.
@@ -349,7 +349,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("**💰 Flexible Plans & Pricing:**")
     st.markdown("""
-    Plans are based on 2, 3, or 5 classes per week with one-to-one 45-minute lessons. Pricing is personalised — contact us for a quote for your family.
+    Plans are based on 2, 3, or 5 classes per week with one-to-one 30–45 minute lessons. Pricing is personalised — contact us for a quote for your family.
     """)
     st.markdown("---")
     st.markdown("**📞 Contact:**")
