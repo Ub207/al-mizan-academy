@@ -220,8 +220,10 @@
       --gray-bg:      #F8FAFC;
       --gray-line:    #E2E8F0;
       --white:        #FFFFFF;
-      --whatsapp:     #25D366;
-      --whatsapp-dk:  #1EBE5B;
+      /* WhatsApp brand green fails AA for white text (2:1); use a darker
+         brand-family teal (5.2:1 white text) for buttons, bright green for icons. */
+      --whatsapp:     #0B7C6C;
+      --whatsapp-dk:  #095F53;
 
       --radius:   16px;
       --radius-sm: 10px;
@@ -294,9 +296,9 @@
       white-space: nowrap;
     }
     .btn:active { transform: translateY(1px) scale(.99); }
-    .btn-primary { background: var(--emerald); color: #fff; box-shadow: 0 8px 24px rgba(5,150,105,.28); }
-    .btn-primary:hover { background: var(--emerald-dark); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(5,150,105,.34); }
-    .btn-whatsapp { background: var(--whatsapp); color: #fff; box-shadow: 0 8px 24px rgba(37,211,102,.28); }
+    .btn-primary { background: var(--emerald-dark); color: #fff; box-shadow: 0 8px 24px rgba(5,150,105,.28); }
+    .btn-primary:hover { background: var(--emerald-deep); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(5,150,105,.34); }
+    .btn-whatsapp { background: var(--whatsapp); color: #fff; box-shadow: 0 8px 24px rgba(11,124,108,.28); }
     .btn-whatsapp:hover { background: var(--whatsapp-dk); transform: translateY(-2px); }
     .btn-outline { background: var(--white); color: var(--navy); border: 1.5px solid var(--gray-line); }
     .btn-outline:hover { border-color: var(--emerald); color: var(--emerald-dark); transform: translateY(-2px); }
@@ -758,10 +760,10 @@
     .course-link:hover svg { transform: translateX(3px); }
     .course-wa-btn {
       display: inline-flex; align-items: center; gap: 6px; font-size: 13px;
-      color: #128C7E; font-weight: 600; text-decoration: none;
+      color: #0D6E63; font-weight: 700; text-decoration: none;
     }
     .course-wa-btn:hover { text-decoration: underline; }
-    .course-wa-btn svg { width: 16px; height: 16px; color: #25D366; }
+    .course-wa-btn svg { width: 16px; height: 16px; color: var(--whatsapp); }
     .courses-note { margin-top: 28px; font-size: 14px; color: var(--muted); text-align: center; }
     .courses-note a { color: var(--emerald-dark); font-weight: 600; }
 
@@ -800,7 +802,7 @@
     }
     .step-num {
       width: 40px; height: 40px; border-radius: 12px; margin-bottom: 16px;
-      background: var(--emerald); color: #fff; font-family: var(--heading);
+      background: var(--emerald-dark); color: #fff; font-family: var(--heading);
       font-size: 17px; font-weight: 800; display: flex; align-items: center; justify-content: center;
     }
     .step h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; }
@@ -821,7 +823,7 @@
     .trial-step-num {
       display: inline-flex; align-items: center; justify-content: center;
       width: 34px; height: 34px; border-radius: 50%;
-      background: var(--emerald); color: #fff; font-family: var(--heading);
+      background: var(--emerald-dark); color: #fff; font-family: var(--heading);
       font-weight: 800; font-size: 15px; margin-bottom: 12px;
     }
     .trial-step h3 { font-size: 15px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
@@ -864,7 +866,7 @@
     .price-card.featured { border: 2px solid var(--emerald); box-shadow: var(--shadow-md); }
     .price-badge {
       position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-      background: var(--emerald); color: #fff; font-size: 11px; font-weight: 800;
+      background: var(--emerald-dark); color: #fff; font-size: 11px; font-weight: 800;
       letter-spacing: .08em; text-transform: uppercase;
       padding: 5px 16px; border-radius: 999px; white-space: nowrap;
     }
@@ -1120,13 +1122,32 @@
       background: var(--whatsapp); color: #fff; text-decoration: none;
       border-radius: 999px; padding: 15px 22px;
       font-size: 15px; font-weight: 800; font-family: var(--heading);
-      box-shadow: 0 10px 30px rgba(37,211,102,.45); transition: transform .2s, background .2s;
+      box-shadow: 0 10px 30px rgba(11,124,108,.45); transition: transform .2s, background .2s;
       position: relative;
     }
     .wa-float:hover { background: var(--whatsapp-dk); transform: translateY(-2px); }
     .wa-float svg { width: 22px; height: 22px; }
     .wa-float .wa-ring { position: absolute; inset: 0; border-radius: 999px; border: 2px solid var(--whatsapp); animation: waRing 2.2s infinite; pointer-events: none; }
     @keyframes waRing { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(1.25); opacity: 0; } }
+
+    /* Mobile sticky trial bar — primary conversion path within thumb reach */
+    #mobile-cta-bar {
+      display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 998;
+      background: rgba(255,255,255,.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--gray-line);
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+      gap: 10px; box-shadow: 0 -8px 24px rgba(15,23,42,.08);
+    }
+    #mobile-cta-bar .btn { min-height: 48px; padding: 12px 14px; font-size: 15px; }
+    #mobile-cta-bar .cta-trial { flex: 1; }
+    #mobile-cta-bar .cta-wa { width: 54px; padding: 12px; flex-shrink: 0; }
+    #mobile-cta-bar.hidden-by-contact { display: none !important; }
+    @media (max-width: 768px) {
+      #mobile-cta-bar { display: flex; }
+      .wa-float { display: none; }
+      body { padding-bottom: 76px; }
+      .float-stack { bottom: calc(90px + env(safe-area-inset-bottom, 0px)); }
+    }
 
     /* Chat modal */
     #chat-overlay { display: none; position: fixed; inset: 0; background: rgba(15,23,42,.55); z-index: 1000; align-items: flex-end; justify-content: flex-end; padding: 24px; }
@@ -2126,6 +2147,16 @@
   </a>
 </div>
 
+<!-- ════════ MOBILE STICKY CTA BAR ════════ -->
+<div id="mobile-cta-bar">
+  <a href="#contact" class="btn btn-primary cta-trial">
+    <svg width="18" height="18" aria-hidden="true"><use href="#i-cal"/></svg> Book Your Free Trial
+  </a>
+  <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener" class="btn btn-whatsapp cta-wa" aria-label="Chat on WhatsApp">
+    <svg width="22" height="22" aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+</div>
+
 <!-- Chat modal -->
 <div id="chat-overlay">
   <div id="chat-popup" role="dialog" aria-modal="true" aria-label="Mizan Academy AI Assistant">
@@ -2319,12 +2350,20 @@ document.getElementById("chat-overlay").addEventListener("keydown", function (e)
 /* ── Mobile hamburger menu ── */
 var hamburger = document.getElementById("hamburger");
 var mobileMenu = document.getElementById("mobile-menu");
+var ctaBar = document.getElementById("mobile-cta-bar");
+/* Hide the sticky bar while the contact form itself is on screen */
+if (window.IntersectionObserver) {
+  new IntersectionObserver(function (entries) {
+    ctaBar.classList.toggle("hidden-by-contact", entries.some(function (en) { return en.isIntersecting; }));
+  }, { threshold: 0.15 }).observe(document.getElementById("contact"));
+}
 function closeMobileMenu() {
   mobileMenu.classList.remove("open");
   hamburger.classList.remove("active");
   hamburger.setAttribute("aria-expanded", "false");
   hamburger.setAttribute("aria-label", "Open menu");
   document.body.style.overflow = "";
+  ctaBar.classList.remove("hidden-by-contact");
 }
 hamburger.addEventListener("click", function () {
   var open = mobileMenu.classList.toggle("open");
@@ -2332,6 +2371,7 @@ hamburger.addEventListener("click", function () {
   hamburger.setAttribute("aria-expanded", open);
   hamburger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   document.body.style.overflow = open ? "hidden" : "";
+  ctaBar.classList.toggle("hidden-by-contact", open);
 });
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && mobileMenu.classList.contains("open")) { closeMobileMenu(); hamburger.focus(); }
