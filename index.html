@@ -74,6 +74,16 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Meet Ubaid ur Rahman — Online Quran Teacher at Mizan Academy",
+    "description": "A short introduction from Ubaid ur Rahman, Hafiz-e-Quran and Fazil graduate, who teaches Quran Reading, Tajweed and Islamic Studies one-to-one online to kids and adults worldwide.",
+    "contentUrl": "https://ub207.github.io/al-mizan-academy/assets/videos/teacher-intro.mp4",
+    "thumbnailUrl": "https://ub207.github.io/al-mizan-academy/assets/teacher-600.jpg"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
@@ -689,20 +699,69 @@
       font-weight: 700;
     }
 
-    /* Teacher intro video placeholder */
-    .teacher-video-placeholder {
-      display: flex; align-items: center; gap: 16px;
-      background: var(--emerald-tint); border: 1px dashed var(--emerald-line);
-      border-radius: 16px; padding: 18px 20px; margin-bottom: 26px;
+    /* Teacher intro video card */
+    .teacher-video-card {
+      background: var(--white); border: 1px solid var(--gray-line);
+      border-radius: var(--radius); padding: 10px; margin-bottom: 22px;
+      box-shadow: var(--shadow-md);
     }
-    .tv-ph-icon {
-      flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px;
-      background: var(--white); border: 1px solid var(--emerald-line);
+    .teacher-video-frame {
+      position: relative; aspect-ratio: 16 / 9; border-radius: 12px;
+      overflow: hidden; background: var(--navy);
+    }
+    .teacher-video-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .teacher-video-caption {
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 10px 6px; font-size: 13.5px; font-weight: 600; color: var(--muted);
+    }
+    .teacher-video-caption svg { width: 16px; height: 16px; color: var(--emerald); flex-shrink: 0; }
+
+    /* Teacher professional profile panel (under video) */
+    .teacher-profile {
+      background: var(--gray-bg); border: 1px solid var(--gray-line);
+      border-radius: var(--radius); padding: 22px 24px; margin-bottom: 22px;
+    }
+    .tp-id { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    .tp-avatar {
+      width: 52px; height: 52px; border-radius: 14px; flex-shrink: 0;
+      background: var(--emerald-tint); border: 1px solid var(--emerald-line);
       color: var(--emerald-dark); display: flex; align-items: center; justify-content: center;
     }
-    .teacher-video-placeholder strong { display: block; font-family: var(--heading); font-size: 14.5px; color: var(--navy); margin-bottom: 2px; }
-    .teacher-video-placeholder p { font-size: 13px; color: var(--ink); line-height: 1.5; }
-    .teacher-video-placeholder .btn { margin-left: auto; flex-shrink: 0; }
+    .tp-avatar svg { width: 26px; height: 26px; }
+    .tp-name { font-family: var(--heading); font-size: 19px; font-weight: 800; color: var(--navy); line-height: 1.25; letter-spacing: -.01em; }
+    .tp-role {
+      display: inline-flex; align-items: center; gap: 6px; margin-top: 4px;
+      font-size: 12.5px; font-weight: 700; color: var(--emerald-dark);
+      background: var(--emerald-tint); border: 1px solid var(--emerald-line);
+      padding: 3px 10px; border-radius: 999px; width: fit-content;
+    }
+    .tp-role svg { width: 13px; height: 13px; }
+    .tp-list {
+      list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+    }
+    .tp-list li {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--white); border: 1px solid var(--gray-line); border-radius: 12px;
+      padding: 11px 14px; font-size: 14px; font-weight: 600; color: var(--navy-soft);
+    }
+    .tp-list svg { width: 18px; height: 18px; color: var(--emerald); flex-shrink: 0; }
+
+    /* Prominent free-trial CTA band (under video) */
+    .trial-cta-band {
+      background: linear-gradient(135deg, var(--emerald-tint), #F0FDFA);
+      border: 1px solid var(--emerald-line); border-radius: var(--radius);
+      padding: 22px 24px; margin-bottom: 26px; text-align: center;
+    }
+    .trial-cta-band h4 { font-size: 18px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+    .trial-cta-band p { font-size: 14px; color: var(--ink); margin-bottom: 16px; }
+    .trial-cta-band .hero-btns { justify-content: center; }
+    .trial-cta-band .btn-primary { min-height: 54px; padding: 15px 32px; font-size: 16.5px; }
+    .trial-cta-micro {
+      margin-top: 12px !important; margin-bottom: 0 !important;
+      font-size: 12.5px !important; color: var(--muted) !important; font-weight: 600;
+      display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap;
+    }
+    .trial-cta-micro svg { width: 14px; height: 14px; color: var(--emerald); }
 
     /* Teacher trust badges */
     .trust-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; justify-content: center; }
@@ -1225,6 +1284,12 @@
       .teacher-card { padding: 24px 18px; border-radius: 20px; }
       .teacher-credentials-card { padding: 14px 12px; }
       .teacher-cred-badges { grid-template-columns: 1fr 1fr; }
+      .teacher-video-card { padding: 8px; }
+      .teacher-video-caption { font-size: 12.5px; padding: 10px 6px 4px; }
+      .teacher-profile { padding: 18px 16px; }
+      .tp-list { grid-template-columns: 1fr; }
+      .trial-cta-band { padding: 20px 16px; }
+      .trial-cta-band .btn { width: 100%; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1470,22 +1535,54 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Online Teaching:</strong> Personalised 1-to-1 lessons via Zoom and Google Meet, designed around each student's local time zone in the UK, USA and Canada.</span></li>
         </ul>
 
-        <!-- Video placeholder: replace with a real intro video when available -->
-        <div class="teacher-video-placeholder" role="group" aria-label="Teacher introduction video coming soon">
-          <span class="tv-ph-icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-video"/></svg></span>
-          <div>
-            <strong>Introducing Ubaid ur Rahman</strong>
-            <p>An introduction video is on its way. In the meantime, book a free trial to meet your teacher live, one-to-one.</p>
+        <!-- Teacher introduction video -->
+        <div class="teacher-video-card">
+          <div class="teacher-video-frame">
+            <video controls preload="metadata" playsinline poster="assets/teacher-600.jpg" aria-label="Introduction video: Ubaid ur Rahman, Quran teacher at Mizan Academy">
+              <source src="assets/videos/teacher-intro.mp4" type="video/mp4" />
+              Your browser does not support embedded video. <a href="assets/videos/teacher-intro.mp4">Download the introduction video</a> instead.
+            </video>
           </div>
-          <a href="#contact" class="btn btn-primary btn-sm">Meet Him First</a>
+          <p class="teacher-video-caption"><svg aria-hidden="true"><use href="#i-video"/></svg> Meet Ubaid ur Rahman &mdash; a short introduction from your child's teacher.</p>
+        </div>
+
+        <!-- Professional teacher profile -->
+        <div class="teacher-profile" role="group" aria-label="Teacher profile">
+          <div class="tp-id">
+            <span class="tp-avatar"><svg aria-hidden="true"><use href="#i-user"/></svg></span>
+            <div>
+              <p class="tp-name">Ubaid ur Rahman</p>
+              <span class="tp-role"><svg aria-hidden="true"><use href="#i-starq"/></svg> Online Quran Teacher</span>
+            </div>
+          </div>
+          <ul class="tp-list">
+            <li><svg aria-hidden="true"><use href="#i-book"/></svg> Quran Reading</li>
+            <li><svg aria-hidden="true"><use href="#i-mosque"/></svg> Tajweed</li>
+            <li><svg aria-hidden="true"><use href="#i-heart"/></svg> Islamic Studies</li>
+            <li><svg aria-hidden="true"><use href="#i-user"/></svg> One-to-One Classes</li>
+            <li><svg aria-hidden="true"><use href="#i-globe"/></svg> Worldwide Online Classes</li>
+          </ul>
+        </div>
+
+        <!-- Prominent free trial CTA -->
+        <div class="trial-cta-band">
+          <h4>See how your child learns &mdash; in a live trial class</h4>
+          <p>100% free &middot; one-to-one with Ubaid ur Rahman &middot; no card details needed</p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn btn-primary">
+              <svg width="19" height="19" aria-hidden="true"><use href="#i-cal"/></svg> Book Your Free Trial Class
+            </a>
+          </div>
+          <p class="trial-cta-micro">
+            <svg aria-hidden="true"><use href="#i-check"/></svg> No obligation
+            <svg aria-hidden="true"><use href="#i-check"/></svg> Scheduled in your time zone
+            <svg aria-hidden="true"><use href="#i-check"/></svg> Kids &amp; adults welcome
+          </p>
         </div>
 
         <div class="hero-btns" style="margin-bottom:0;">
-          <a href="#contact" class="btn btn-primary btn-sm">
-            <svg width="18" height="18" aria-hidden="true"><use href="#i-cal"/></svg> Book Your Free Trial
-          </a>
           <a href="https://wa.me/923170203221?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20ask%20the%20teacher%20about%20classes" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
-            <svg width="18" height="18" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp
+            <svg width="18" height="18" aria-hidden="true"><use href="#i-wa"/></svg> Ask the Teacher a Question
           </a>
         </div>
       </div>
@@ -1868,20 +1965,24 @@
     </div>
     <div class="faq-list">
       <details class="faq-item" open>
-        <summary>What ages do you teach?</summary>
-        <p class="faq-a">We teach children from around age 5 upwards, plus teenagers and adults. There is no upper age limit &mdash; we welcome adult beginners and everyone who wants to learn, regardless of age.</p>
+        <summary>Is the trial class free?</summary>
+        <p class="faq-a">Yes &mdash; the first class is completely free, with no card details and no obligation. You meet the teacher one-to-one, he assesses your child's level, and you decide afterwards whether to continue.</p>
       </details>
       <details class="faq-item">
-        <summary>Do you teach adults?</summary>
-        <p class="faq-a">Yes. We warmly welcome adult learners &mdash; including professionals, university students, parents and reverts who wish to learn Quran reading, correct their Tajweed, or study Islamic basics at their own schedule.</p>
+        <summary>Do you teach kids and adults?</summary>
+        <p class="faq-a">Yes. We teach children from around age 5 upwards, plus teenagers and adults &mdash; there is no upper age limit. Whether it's a young beginner or an adult wanting to correct their Tajweed, lessons are tailored to each student's age and pace.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which countries do you teach?</summary>
+        <p class="faq-a">We teach families worldwide, with many students in the UK, USA and Canada. Classes are always scheduled in your local time zone &mdash; just tell us your country and preferred times and we'll arrange a slot that fits your family.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How are classes conducted?</summary>
+        <p class="faq-a">Every class is a live, one-to-one session over Zoom or Google Meet, with interactive screen sharing of the Quran or Qaida. Your child learns from home, at a private and safe pace, with progress updates shared openly with parents.</p>
       </details>
       <details class="faq-item">
         <summary>What is included in the free trial?</summary>
         <p class="faq-a">A live one-to-one session with the teacher where you meet, we assess the student's current level, run a short reading/Tajweed check, and give you a personalised learning recommendation. It's completely free with no obligation.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How do online classes work?</summary>
-        <p class="faq-a">All classes are conducted live, one-on-one via Zoom or Google Meet. The student and teacher connect directly with interactive digital screen sharing of the Quran or Qaida lesson. Every lesson is interactive and tailored to the student's personal learning pace.</p>
       </details>
       <details class="faq-item">
         <summary>What Quran level can my child start from?</summary>
