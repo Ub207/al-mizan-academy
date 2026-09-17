@@ -9,9 +9,9 @@
   <script>document.documentElement.classList.add('js');</script>
 
   <!-- ═══════════ PRIMARY SEO ═══════════ -->
-  <title>Mizan Academy | Online Quran Classes for Kids &amp; Adults — UK, USA, Canada</title>
-  <meta name="description" content="One-to-one online Quran classes for kids and adults. Quran Reading, Noorani Qaida, Tajweed, Hifz, Islamic Studies and Arabic with a qualified teacher. Flexible international timings. Free trial class available. Serving families in UK, USA and Canada." />
-  <meta name="keywords" content="online quran classes, online quran classes for kids, learn quran online, quran classes for kids, quran tajweed classes, online tajweed classes, quran teacher online, quran classes UK, online quran classes USA, quran classes Canada, noorani qaida online, hifz quran online" />
+  <title>Mizan Academy | Online Quran Classes for Kids &amp; Adults — UK, USA, Canada &amp; Worldwide</title>
+  <meta name="description" content="One-to-one online Quran classes for kids and adults. Quran Reading, Noorani Qaida, Tajweed, Hifz, Islamic Studies and Arabic with a qualified Hafiz teacher. Flexible timings in your time zone. Free trial class. Serving families in the UK, USA, Canada, Australia, UAE and worldwide." />
+  <meta name="keywords" content="online quran classes, online quran classes for kids, learn quran online, quran classes for kids, quran tajweed classes, online tajweed classes, quran teacher online, quran classes UK, online quran classes USA, quran classes Canada, quran classes Australia, online quran classes UAE, noorani qaida online, hifz quran online, islamic studies for kids online, one to one quran teacher" />
   <meta name="author" content="Mizan Academy" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#059669" />
@@ -23,8 +23,8 @@
   <meta property="og:site_name" content="Mizan Academy" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://ub207.github.io/al-mizan-academy/" />
-  <meta property="og:title" content="Mizan Academy | Online Quran Classes for Kids &amp; Adults — UK, USA, Canada" />
-  <meta property="og:description" content="One-to-one online Quran classes for kids and adults. Quran Reading, Tajweed, Noorani Qaida and Islamic Studies with a qualified teacher. Free trial class. Serving families in UK, USA and Canada." />
+  <meta property="og:title" content="Mizan Academy | Online Quran Classes for Kids &amp; Adults — UK, USA, Canada &amp; Worldwide" />
+  <meta property="og:description" content="One-to-one online Quran classes for kids and adults. Quran Reading, Tajweed, Noorani Qaida and Islamic Studies with a qualified Hafiz teacher. Free trial class. Serving families in the UK, USA, Canada, Australia, UAE and worldwide." />
   <meta property="og:image" content="https://ub207.github.io/al-mizan-academy/assets/og-cover.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -32,8 +32,8 @@
 
   <!-- ═══════════ TWITTER CARDS ═══════════ -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mizan Academy | Online Quran Classes for Kids &amp; Adults — UK, USA, Canada" />
-  <meta name="twitter:description" content="One-to-one online Quran classes for kids and adults. Quran Reading, Tajweed, Noorani Qaida and Islamic Studies. Free trial class. Serving families in UK, USA and Canada." />
+  <meta name="twitter:title" content="Mizan Academy | Online Quran Classes for Kids &amp; Adults — UK, USA, Canada &amp; Worldwide" />
+  <meta name="twitter:description" content="One-to-one online Quran classes for kids and adults. Quran Reading, Tajweed, Noorani Qaida and Islamic Studies. Free trial class. Serving families in the UK, USA, Canada, Australia, UAE and worldwide." />
   <meta name="twitter:image" content="https://ub207.github.io/al-mizan-academy/assets/og-cover.jpg" />
 
   <!-- ═══════════ FONTS (preconnect + single request) ═══════════ -->
@@ -51,10 +51,10 @@
     "name": "Mizan Academy",
     "alternateName": "Al-Mizan Online Quran Academy",
     "url": "https://ub207.github.io/al-mizan-academy/",
-    "description": "Online Quran academy offering one-to-one Quran, Qaida, Tajweed, Arabic and Islamic Studies classes for kids and adults in UK, USA and Canada.",
+    "description": "Online Quran academy offering one-to-one Quran, Qaida, Tajweed, Arabic and Islamic Studies classes for kids and adults in the UK, USA, Canada, Australia, UAE and worldwide.",
     "email": "usmanubaidurrehman@gmail.com",
     "telephone": "+92-317-0203221",
-    "areaServed": ["United Kingdom", "United States", "Canada"],
+    "areaServed": ["United Kingdom", "United States", "Canada", "Australia", "United Arab Emirates", "Worldwide"],
     "employee": {
       "@type": "Person",
       "name": "Ubaid ur Rahman",
@@ -546,6 +546,21 @@
     .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.92); font-size: 13.5px; font-weight: 600; }
     .trust-item svg { width: 20px; height: 20px; color: #34D399; flex-shrink: 0; }
 
+    /* Stats band — count-up numbers sit between hero and teacher for instant credibility */
+    .stats-band { background: var(--white); border-bottom: 1px solid var(--gray-line); padding: clamp(30px, 4vw, 44px) 5%; }
+    .stats-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; text-align: center;
+    }
+    .stat { display: flex; flex-direction: column; gap: 4px; }
+    .stat-num {
+      font-family: var(--heading); font-weight: 800; color: var(--emerald-dark);
+      font-size: clamp(28px, 4.5vw, 40px); line-height: 1.1; font-variant-numeric: tabular-nums;
+      letter-spacing: -.02em;
+    }
+    .stat-label { font-size: 13.5px; font-weight: 600; color: var(--muted); }
+    @media (max-width: 768px) { .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 24px 14px; } }
+
     /* ═══════════════════════════════════════
        ABOUT THE TEACHER
        ═══════════════════════════════════════ */
@@ -710,6 +725,26 @@
       overflow: hidden; background: var(--navy);
     }
     .teacher-video-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    /* Custom play overlay — native controls stay available once playback starts */
+    .video-play {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(to top, rgba(15,23,42,.5), rgba(15,23,42,.15));
+      border: none; cursor: pointer; padding: 0; transition: opacity .3s ease;
+    }
+    .video-play:hover .vp-btn { transform: scale(1.07); background: var(--emerald-deep); }
+    .video-play:focus-visible { outline-offset: -4px; }
+    .video-play.playing { opacity: 0; pointer-events: none; }
+    .vp-btn {
+      width: clamp(60px, 14vw, 76px); height: clamp(60px, 14vw, 76px); border-radius: 999px;
+      background: var(--emerald-dark); color: #fff; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 12px 34px rgba(4,120,87,.5); transition: transform .22s ease, background .22s ease;
+    }
+    .vp-btn svg { width: 30px; height: 30px; margin-left: 4px; }
+    .vp-label {
+      position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+      color: #fff; font-size: 12.5px; font-weight: 700; font-family: var(--heading);
+      letter-spacing: .04em; text-shadow: 0 1px 8px rgba(15,23,42,.7); white-space: nowrap;
+    }
     .teacher-video-caption {
       display: flex; align-items: center; gap: 8px;
       padding: 12px 10px 6px; font-size: 13.5px; font-weight: 600; color: var(--muted);
@@ -978,7 +1013,7 @@
        ═══════════════════════════════════════ */
     #countries { background: var(--gray-bg); }
     .countries-grid {
-      display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px;
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
       max-width: 980px; margin: 0 auto;
     }
     .country-card {
@@ -1325,6 +1360,7 @@
     <symbol id="i-hands" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-1.5 2-4 3-6 3v5c0 4.5 2.8 8 6 10 3.2-2 6-5.5 6-10V6c-2 0-4.5-1-6-3z"/><path d="M12 8v6M9.5 11h5"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
     <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14z"/></symbol>
     <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
   </defs>
 </svg>
@@ -1403,7 +1439,7 @@
         </div>
         <div class="hero-trust-item" role="listitem">
           <span class="check-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
-          <span>UK &middot; USA &middot; Canada</span>
+          <span>UK &middot; USA &middot; Canada &amp; Worldwide</span>
         </div>
       </div>
 
@@ -1452,7 +1488,7 @@
       <div class="trust-badges" role="list" aria-label="Teacher qualifications">
         <span class="trust-badge" role="listitem"><svg aria-hidden="true"><use href="#i-shield"/></svg> Fazil Graduate</span>
         <span class="trust-badge" role="listitem"><svg aria-hidden="true"><use href="#i-starq"/></svg> Hafiz-e-Quran</span>
-        <span class="trust-badge" role="listitem"><svg aria-hidden="true"><use href="#i-globe"/></svg> UK &middot; USA &middot; Canada Families</span>
+        <span class="trust-badge" role="listitem"><svg aria-hidden="true"><use href="#i-globe"/></svg> Families Worldwide</span>
       </div>
     </div>
   </div>
@@ -1465,8 +1501,18 @@
     <div class="trust-item"><svg aria-hidden="true"><use href="#i-starq"/></svg> Qualified Teacher</div>
     <div class="trust-item"><svg aria-hidden="true"><use href="#i-kid"/></svg> Kids &amp; Adults</div>
     <div class="trust-item"><svg aria-hidden="true"><use href="#i-clock"/></svg> Flexible Timings</div>
-    <div class="trust-item"><svg aria-hidden="true"><use href="#i-globe"/></svg> UK &middot; USA &middot; Canada</div>
+    <div class="trust-item"><svg aria-hidden="true"><use href="#i-globe"/></svg> UK &middot; USA &middot; Canada &middot; Worldwide</div>
     <div class="trust-item"><svg aria-hidden="true"><use href="#i-video"/></svg> Free Trial Class</div>
+  </div>
+</div>
+
+<!-- ════════ 2b. STATS BAND ════════ -->
+<div class="stats-band" role="region" aria-label="Mizan Academy at a glance">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-num" data-count="6">6</span><span class="stat-label">Quran &amp; Arabic Courses</span></div>
+    <div class="stat"><span class="stat-num" data-count="100" data-suffix="%">100%</span><span class="stat-label">One-to-One Lessons</span></div>
+    <div class="stat"><span class="stat-num" data-count="3">3</span><span class="stat-label">Teaching Languages</span></div>
+    <div class="stat"><span class="stat-num" data-count="24" data-suffix="h">24h</span><span class="stat-label">Typical Trial Response Time</span></div>
   </div>
 </div>
 
@@ -1538,10 +1584,14 @@
         <!-- Teacher introduction video -->
         <div class="teacher-video-card">
           <div class="teacher-video-frame">
-            <video controls preload="metadata" playsinline poster="assets/teacher-600.jpg" aria-label="Introduction video: Ubaid ur Rahman, Quran teacher at Mizan Academy">
+            <video id="teacher-video" controls preload="metadata" playsinline poster="assets/teacher-600.jpg" aria-label="Introduction video: Ubaid ur Rahman, Quran teacher at Mizan Academy">
               <source src="assets/videos/teacher-intro.mp4" type="video/mp4" />
               Your browser does not support embedded video. <a href="assets/videos/teacher-intro.mp4">Download the introduction video</a> instead.
             </video>
+            <button type="button" class="video-play" id="video-play-btn" aria-label="Play the teacher introduction video">
+              <span class="vp-btn" aria-hidden="true"><svg><use href="#i-play"/></svg></span>
+              <span class="vp-label">Watch: Meet Your Teacher</span>
+            </button>
           </div>
           <p class="teacher-video-caption"><svg aria-hidden="true"><use href="#i-video"/></svg> Meet Ubaid ur Rahman &mdash; a short introduction from your child's teacher.</p>
         </div>
@@ -1895,17 +1945,19 @@
   <div class="container">
     <div class="section-head centered">
       <p class="eyebrow"><svg width="14" height="14" aria-hidden="true"><use href="#i-globe"/></svg> Online Classes Worldwide</p>
-      <h2 class="section-title" id="countries-title">Online Quran Classes for Families in UK, USA &amp; Canada</h2>
+      <h2 class="section-title" id="countries-title">Online Quran Classes for Families in the UK, USA, Canada, Australia &amp; the Gulf</h2>
       <p class="section-sub">Learn from home with flexible scheduling designed around your family's local time zone.</p>
     </div>
     <div class="countries-grid reveal">
       <div class="country-card"><span class="flag" role="img" aria-label="United Kingdom flag">&#127468;&#127463;</span> United Kingdom</div>
       <div class="country-card"><span class="flag" role="img" aria-label="United States flag">&#127482;&#127480;</span> United States</div>
       <div class="country-card"><span class="flag" role="img" aria-label="Canada flag">&#127464;&#127462;</span> Canada</div>
+      <div class="country-card"><span class="flag" role="img" aria-label="Australia flag">&#127463;&#127482;</span> Australia</div>
+      <div class="country-card"><span class="flag" role="img" aria-label="United Arab Emirates flag">&#127462;&#127466;</span> UAE</div>
     </div>
     <div class="intl-benefits" role="list" aria-label="What to expect from online classes">
       <div class="intl-benefit" role="listitem"><span class="intl-ico"><svg aria-hidden="true"><use href="#i-video"/></svg></span><strong>Online classes from home</strong><p>Live lessons via Zoom or Google Meet &mdash; no commuting, learning in a safe familiar space.</p></div>
-      <div class="intl-benefit" role="listitem"><span class="intl-ico"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><strong>Time-zone friendly scheduling</strong><p>Evenings, mornings and weekends, arranged around local UK, USA and Canada times.</p></div>
+      <div class="intl-benefit" role="listitem"><span class="intl-ico"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><strong>Time-zone friendly scheduling</strong><p>Evenings, mornings and weekends, arranged around your local time &mdash; UK, USA, Canada, Australia, UAE and beyond.</p></div>
       <div class="intl-benefit" role="listitem"><span class="intl-ico"><svg aria-hidden="true"><use href="#i-kid"/></svg></span><strong>Kids and adults welcome</strong><p>One-to-one lessons for every age &mdash; from young children to adult beginners.</p></div>
     </div>
     <p class="countries-sub">Classes are delivered online as one-to-one live lessons. We teach students in the UK, USA, Canada and worldwide, with schedules tailored to <strong>your local time zone</strong>.</p>
@@ -2070,6 +2122,9 @@
                 <option>United Kingdom</option>
                 <option>United States</option>
                 <option>Canada</option>
+                <option>Australia</option>
+                <option>United Arab Emirates</option>
+                <option>Saudi Arabia</option>
                 <option>Other</option>
               </select>
               <p class="form-error" id="e-country">Please select your country.</p>
@@ -2150,6 +2205,7 @@
           <ul class="info-lines" style="margin-top:14px;">
             <li><span class="ico"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><a href="https://wa.me/923170203221" target="_blank" rel="noopener">+92 317 0203221 (WhatsApp)</a></li>
             <li><span class="ico"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><a href="mailto:usmanubaidurrehman@gmail.com">usmanubaidurrehman@gmail.com</a></li>
+            <li><span class="ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>Based in Pakistan &middot; teaching students worldwide online</li>
             <li><span class="ico"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>Available 9 AM &ndash; 10 PM PKT (UTC+5)</li>
             <li><span class="ico"><svg aria-hidden="true"><use href="#i-video"/></svg></span>Classes via Zoom or Google Meet</li>
           </ul>
@@ -2446,6 +2502,45 @@ document.getElementById("chat-overlay").addEventListener("keydown", function (e)
   if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
   else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
 });
+
+/* ── Teacher video: custom play overlay (keeps native controls after playback starts) ── */
+(function () {
+  var video = document.getElementById("teacher-video");
+  var playBtn = document.getElementById("video-play-btn");
+  if (!video || !playBtn) return;
+  playBtn.addEventListener("click", function () {
+    var p = video.play();
+    if (p && p.catch) p.catch(function () {}); /* autoplay policy — controls remain available */
+  });
+  video.addEventListener("play", function () { playBtn.classList.add("playing"); });
+  video.addEventListener("pause", function () { playBtn.classList.remove("playing"); });
+  video.addEventListener("ended", function () { playBtn.classList.remove("playing"); });
+})();
+
+/* ── Stats: count-up when scrolled into view (once; static numbers without JS/IO) ── */
+(function () {
+  var nums = Array.prototype.slice.call(document.querySelectorAll(".stat-num[data-count]"));
+  if (!nums.length) return;
+  var fmt = function (el, v) { el.textContent = v + (el.getAttribute("data-suffix") || ""); };
+  if (!window.IntersectionObserver) return; /* static values already in markup */
+  nums.forEach(function (el) { el.textContent = "0"; });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      io.unobserve(en.target);
+      var el = en.target, target = +el.getAttribute("data-count"), t0 = null, dur = 1100;
+      var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduced) { fmt(el, target); return; }
+      requestAnimationFrame(function step(ts) {
+        if (t0 === null) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        fmt(el, Math.round(target * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) requestAnimationFrame(step);
+      });
+    });
+  }, { threshold: 0.4 });
+  nums.forEach(function (el) { io.observe(el); });
+})();
 
 /* ── Mobile hamburger menu ── */
 var hamburger = document.getElementById("hamburger");
